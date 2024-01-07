@@ -1,0 +1,36 @@
+.m-input{
+    background-color: rgb(211, 174, 174);
+    height: 40px;
+    display: flex;
+    line-height: 40px;
+    justify-content: center;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: #bbb;
+    color: #fff;
+
+}
+.m-input .m-input-left{
+    position: absolute;
+    left: 0px;
+    padding-left: 10px;
+}
+.m-input .m-input-right{
+    position: absolute;
+    right: 0px;
+    padding-right: 10px;
+}
+.m-input button{
+    background-color: rgb(60, 212, 14);
+    color: white;
+    border: 1px solid #333;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+.m-input button:hover{
+    background-color: black;
+}
+.m-input .m-input-selected{
+    background-color:blue ;
+}

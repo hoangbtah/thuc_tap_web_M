@@ -1,0 +1,42 @@
+.m-table{
+    width: 100%;
+    /* background-color: #00ffff; */
+    border: unset;
+    border-collapse: collapse;
+
+}
+.m-table .m-content-left{
+    text-align: left;
+}
+.m-table .m-content-center{
+    text-align: center;
+}
+.m-table .m-content-right{
+    text-align: right;
+}
+.m-table .m-stt{
+    width: 15px;
+}
+.m-table .m-hoten{
+    width: 150px;
+}
+.m-table .m-diachi{
+    width: 200px;
+}
+.m-table .m-ngaysinh{
+    width: 100px;
+}
+.m-table .m-luong{
+    width: 100px;
+}
+.m-table .m-hoatdong{
+    width: 20px;
+}
+
+.m-table tr{
+    height: 30px;
+    border-bottom:1px solid #333 ;
+}
+.m-table tr:hover{
+    background-color: blanchedalmond;
+}

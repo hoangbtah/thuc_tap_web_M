@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+<body>
+    <div class="m-button">
+        <button class="m-login">Đăng nhập</button>
+    </div>
+    <div >
+       <table class="m-table">
+       <thead>
+        <tr>
+            <th class="m-stt">STT</th>
+            <th class="m-hoten">Họ và tên</th>
+            <th class="m-diachi">Địa chỉ</th>
+            <th class="m-ngaysinh">Ngày sinh</th>
+            <th class="m-luong">Lương</th>
+            <th class="m-hoatdong">Hoạt động</th>
+        </tr>       
+       </thead>     
+       <tbody>
+        <tr>
+            <td class="m-content-left">1</td>
+            <td class="m-content-left">Bùi Việt Hoàng</td>
+            <td class="m-content-left">Thái Bình</td>
+            <td class="m-content-center">18/08/2002</td>
+            <td class="m-content-right" >10.000.000</td>
+            <td class="m-content-center">
+                <input type="checkbox" checked/>
+            </td>
+        </tr>
+        <tr>
+            <td class="m-content-left">1</td>
+            <td class="m-content-left">Bùi Việt Hoàng</td>
+            <td class="m-content-left">Thái Bình</td>
+            <td class="m-content-center">18/08/2002</td>
+            <td class="m-content-right" >10.000.000</td>
+            <td class="m-content-center">
+                <input type="checkbox" checked/>
+            </td>
+        </tr>
+        <tr>
+            <td class="m-content-left">1</td>
+            <td class="m-content-left">Bùi Việt Hoàng</td>
+            <td class="m-content-left">Thái Bình</td>
+            <td class="m-content-center">18/08/2002</td>
+            <td class="m-content-right" >10.000.000</td>
+            <td class="m-content-center">
+                <input type="checkbox" checked/>
+            </td>
+        </tr>
+      
+           
+     
+       </tbody>
+      
+       </table>
+          
+            
+    </div>
+    <div class="m-input">
+        <div class="m-input-left">
+            Trang
+        </div>
+        <div class="m-input-center ">
+            <button class="m-input-selected">1</button>
+            <button >2</button>
+            <button >3</button>
+            <button >4</button>
+           
+        </div>
+        <div class="m-input-right">
+            Tìm trong khoảng
+            <select name="" id="">
+                <option>5</option>
+                <option>10</option>
+                <option>15</option>
+            </select>
+        </div>
+    </div>
+    <div class="m-dialog">
+        <div class="m-dialog-content">
+            1. bạn có muốn xóa không
+        </div>
+    </div>
+    <div class="m-row">
+        <label for="">1.button</label>
+        <div class="m-row">
+            <button id="show-dialog" class="m-btn">Đồng ý</button>
+        </div>
+    </div>
+    <div class="m-row">
+        <label for="">2.button</label>
+        <div class="m-row">
+            <button id="showtoast" class="m-btn m-btn-icon m-btn-icon-add">Đồng ý</button>
+        </div>
+    </div>
+    <div class="m-row">
+        <label for="">5. toast massage</label>
+        <div class="m-toast-box">
+            <div class="m-toast-item m-toast-error">
+                <div class="m-toast-icon">
+
+                </div>
+                <div class="m-toast-text">
+                    Nội dung đi kèm tiêu đề.
+                </div>
+                <div class="m-toast-close">
+                    
+                </div>
+            </div>
+            <div class="m-toast-item m-toast-susscess">
+                <div class="m-toast-icon">
+
+                </div>
+                <div class="m-toast-text">
+                    Nội dung đi kèm tiêu đề.
+                </div>
+                <div class="m-toast-close">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+     document.getElementById("showtoast").addEventListener("click",function(){
+        var toastBox= document.getElementsByClassName("m-toast-box")
+       toastBox[0].style.display="block";
+       setTimeout(()=>{
+        toastBox[0].style.display="none";
+       },3000
+       );
+     })
+     document.getElementById("show-dialog").addEventListener("click",function(){
+        var toastBox= document.getElementsByClassName("m-dialog")
+       toastBox[0].style.display="block";
+       setTimeout(()=>{
+        toastBox[0].style.display="none";
+       },3000
+       );
+     })
+    </script>
+</body>
+</html>

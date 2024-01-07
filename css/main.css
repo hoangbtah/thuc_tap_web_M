@@ -1,0 +1,43 @@
+@import url(./input.css);
+@import url(./table.css);
+@import url(./dialog.css);
+@import url(./button.css);
+@import url(./toast.css);
+@import url(./header.css);
+@import url(./navbar.css);
+@import url(./page-content.css);
+body {
+    font-family:Googlesand Bolds ;
+    font-size: 13px;
+    margin: 0px;
+}
+@font-face{
+    font-family: Googlesand Bolds ;
+    src: url(../assets/fonts/notosans-bold.3ede5aff.woff2);
+}
+@font-face{
+    font-family: Googlesand Italics ;
+    src: url(../assets/fonts/notosans-italic.1c1aaac9.woff2);
+}
+@font-face{
+    font-family: Googlesand Regular ;
+    src: url(../assets/fonts/notosans-regular.2cb88a13.woff2);
+}
+@font-face{
+    font-family: Googlesand Semibold ;
+    src: url(../assets/fonts/notosans-semibold.df3e6dc4.woff2);
+}
+.m-login{
+    background-color: rgb(0, 255, 0);
+    color: #333;
+    border-radius: 50%;
+}
+.main{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 48px);
+    background-color: rgb(134, 94, 172);
+}
+.m-row{
+    width: 100%;
+}
