@@ -6,6 +6,7 @@
 @import url(./header.css);
 @import url(./navbar.css);
 @import url(./page-content.css);
+@import url(./icon.css);
 body {
     font-family:Googlesand Bolds ;
     font-size: 13px;
@@ -36,7 +37,6 @@ body {
     display: flex;
     width: 100%;
     height: calc(100vh - 48px);
-    background-color: rgb(134, 94, 172);
 }
 .m-row{
     width: 100%;
