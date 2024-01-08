@@ -1,12 +1,14 @@
-@import url(./input.css);
+@import url(./page.css);
 @import url(./table.css);
 @import url(./dialog.css);
 @import url(./button.css);
 @import url(./toast.css);
-@import url(./header.css);
-@import url(./navbar.css);
-@import url(./page-content.css);
+@import url(../css/layout/header.css);
+@import url(../css/layout/navbar.css);
+@import url(../css/layout/content.css);
 @import url(./icon.css);
+@import url(./input.css);
+@import url(./combobox.css);
 body {
     font-family:Googlesand Bolds ;
     font-size: 13px;

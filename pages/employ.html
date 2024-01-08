@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/employ.css">
+    <link rel="stylesheet" href="../css/page/employ.css">
     <link rel="stylesheet" href="../css/main.css">
+    
 </head>
 <body>
     <div class="header">
@@ -43,8 +44,119 @@
 
         </div>
         <div class="page-content">
-            content
+            <div class="m-page-header">
+                <div class="m-page-title">Danh sách nhân viên</div>
+                <div class="m-page-button">
+                    <button id="show-dialog" class="m-btn m-btn-icon m-btn-icon-add">Thêm mới nhân viên</button>
+                </div>
+            </div>
+            <div class="m-page-toolbar">
+                <div class="m-toolbar-left">
+                    <input class="m-input m-btn-icon m-btn-icon-add" placeholder="Tìm kiếm theo"/>
+                    <select name="" id="">
+                        <option value="">Tất cả phòng ban</option>
+                        <option value="">Phòng đào tạo</option>
+                    </select>
+                    <select name="" id="">
+                        <option value="">Tất cả vị trí</option>
+                        <option value="">Giám đốc</option>
+                        <option value="">Nhân viên</option>
+                    </select>
+                </div>
+                <div class="m-toolbar-right">
+                    <button class="m-btn-refresh"></button>
+                </div>
+            </div>
+            <div class="m-page-grid">
+                    <table class="m-table">
+                    <thead>
+                     <tr>
+                         <th class="m-stt">STT</th>
+                         <th class="m-hoten">Họ và tên</th>
+                         <th class="m-diachi">Địa chỉ</th>
+                         <th class="m-ngaysinh">Ngày sinh</th>
+                         <th class="m-luong">Lương</th>
+                         <th class="m-hoatdong">Hoạt động</th>
+                     </tr>       
+                    </thead>     
+                    <tbody>
+                     <tr>
+                         <td class="m-content-left">1</td>
+                         <td class="m-content-left">Bùi Việt Hoàng</td>
+                         <td class="m-content-left">Thái Bình</td>
+                         <td class="m-content-center">18/08/2002</td>
+                         <td class="m-content-right" >10.000.000</td>
+                         <td class="m-content-center">
+                             <input type="checkbox" checked/>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="m-content-left">1</td>
+                         <td class="m-content-left">Bùi Việt Hoàng</td>
+                         <td class="m-content-left">Thái Bình</td>
+                         <td class="m-content-center">18/08/2002</td>
+                         <td class="m-content-right" >10.000.000</td>
+                         <td class="m-content-center">
+                             <input type="checkbox" checked/>
+                         </td>
+                     </tr>
+                     <tr>
+                         <td class="m-content-left">1</td>
+                         <td class="m-content-left">Bùi Việt Hoàng</td>
+                         <td class="m-content-left">Thái Bình</td>
+                         <td class="m-content-center">18/08/2002</td>
+                         <td class="m-content-right" >10.000.000</td>
+                         <td class="m-content-center">
+                             <input type="checkbox" checked/>
+                         </td>
+                     </tr>
+                    </tbody>
+                    </table>
+                    <div class="m-page">
+                        <div class="m-page-left">
+                            Trang
+                        </div>
+                        <div class="m-page-center ">
+                            <button class="m-page-selected">1</button>
+                            <button >2</button>
+                            <button >3</button>
+                            <button >4</button>
+                           
+                        </div>
+                        <div class="m-page-right">
+                            Tìm trong khoảng
+                            <select name="" id="">
+                                <option>5</option>
+                                <option>10</option>
+                                <option>15</option>
+                            </select>
+                        </div>
+                    </div>   
+            </div>
+            <div class="m-dialog">
+                <div class="m-dialog-content">
+                    1. bạn có muốn xóa không
+                </div>
+            </div>
         </div>
     </div>
+    <!-- thư viên js -->
+    <script src="/js/jquery-3.7.1.min.js"></script>
+
+    <!-- js dùng chung -->
+    <script src="/js/pagejs/employ.js"></script>
+    <script>
+        alert("hello")
+    //      document.getElementById("show-dialog").addEventListener("click",function(){
+    //     var toastBox= document.getElementsByClassName("m-dialog")
+    //    toastBox[0].style.display="block";
+    //    setTimeout(()=>{
+    //     toastBox[0].style.display="none";
+    //    },3000
+    //    );
+    //  })
+    </script> -->
+    <!-- js dùng riêng cho trang
+    
 </body>
 </html>
