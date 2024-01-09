@@ -41,7 +41,7 @@
                 </div>
             </div>
             <div class="menu-item">
-                <div class="menu-icon m-icon-notice">
+                <div class="menu-icon m-icon-logo">
                     
                 </div>
                 <div class="menu-text">
@@ -201,7 +201,16 @@
                          <td>Sửa
                             <select name="" id="">
                                 <option value="">
-
+                                    
+                                </option>
+                                <option value="">
+                                    Nhân bản
+                                </option>
+                                <option value="">
+                                    Xóa
+                                </option>
+                                <option value="">
+                                    Ngừng sử dụng
                                 </option>
                             </select>
                          </td>
@@ -246,14 +255,113 @@
                 <div class="m-dialog-content">
                     <div class="m-dialog-header">
                         <div class="m-dialog-title">
-                            Thông tin chi tiết nhân viên
+                            Thông tin nhân viên
+                        </div>
+                        <div class="m-dialog-khachhang">
+                            <input type="checkbox"/>
+                            <label for="">Là khách hàng</label>
+                        </div>
+                        <div class="m-dialog-ncc">
+                            <input type="checkbox"/>
+                            <label for="">Là nhà cung cấp</label>
                         </div>
                         <button id="dialog-close" class="m-dialog-close">
                                 X
                         </button>
                     </div>
                     <div class="m-dialog-body">
-                        <label for="">Mã nhân viên</label>
+                        <div class="m-row-1">
+                            <table>
+                                    <tr>
+                                        <td>Mã </td>
+                                        <td>Tên </td>
+                                        <td>Ngày sinh</td>
+                                        <td>Giới tính</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td><input class="m-input" type="text"></td>
+                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input"  type="date"></td>
+                                        <td ><input class=""  type="radio"><label for="">Nam</label> 
+                                            <input class=""  type="radio"><label for="">Nữ</label>
+                                            <input class=""  type="radio"><label for="">Khác</label>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="m-row-2">
+                            <table>
+                                    <tr>
+                                        <td>Đơn vị</td>
+                                        <td>Số CMND</td>
+                                        <td style="width:171px;">Ngày cấp</td>
+                                    </tr>
+                                    <tr>
+                                        <td><select style="width: 400px;" name="" id="">
+                                            <option value="">Phòng nhân sự</option>
+                                            <option value="">Phòng kế toán</option>
+                                        </select></td>
+                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input"  type="date" name="" id=""></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="m-row-3">
+                            <table>
+                               
+                                    <tr>
+                                        <td>Chức danh</td>
+                                        <td>Nơi cấp</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td ><input style="width: 340px;" class="m-input "  type="text"></td>
+                                        <td><input style="width: 340px;" class="m-input "  type="date" name="" id=""></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="m-row-4">
+                            <table>
+                                    <tr>
+                                        <td>Địa chỉ</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 800px;" ><input style="width: 740px;" class="m-input"  type="text" name="" id=""></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="m-row-5">
+                            <table>
+                                    <tr>
+                                        <td>ĐT di động</td>
+                                        <td>ĐT cố định</td>
+                                        <td>Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input"  type="text" ></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <div class="m-row-6">
+                            <table >
+                                    <tr>
+                                        <td>Tài khoản ngân hàng</td>
+                                        <td>Tên ngân hàng</td>
+                                        <td>Chi nhánh</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input"  type="text" ></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <!-- <label for="">Mã nhân viên</label>
                         <div class="m-row">
                             <input id="txtEmployeeCode" required class="m-input" placeholder="Nhập mã nhân viên"/>
                         </div>
@@ -279,10 +387,14 @@
                         <label for="">Mức lương</label>
                         <div class="m-row">
                             <input id="txtSalary" class="m-input" placeholder=""/>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="m-dialog-footer">
-                            <button id="btnSave" class="m-btn">Lưu</button>
+                       <div class="m-dialog-footer-left"> <button id="" class="m-btn m-btn-nocolor ">Hủy</button></div>
+                        <div class="m-dialog-footer-right">
+                            <button id="" class="m-btn m-btn-nocolor">Cất</button>
+                            <button id="btnSave" class="m-btn">Cất và thêm</button>
+                        </div>
                     </div>
                 </div>
             </div>

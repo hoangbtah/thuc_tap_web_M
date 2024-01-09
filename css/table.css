@@ -1,7 +1,8 @@
 .m-table{
     width: 100%;
     /* background-color: #00ffff; */
-    border: unset;
+    /* border: unset; */
+    border:1px solids ;
     border-collapse: collapse;
    
 
@@ -9,6 +10,7 @@
 .m-table tr th{
     font-family:Googlesand Bolds ;
 }
+.m
 .m-table tr td{
     font-family: Googlesand Regular ;
 }
