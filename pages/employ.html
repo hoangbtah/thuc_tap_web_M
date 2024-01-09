@@ -47,7 +47,7 @@
             <div class="m-page-header">
                 <div class="m-page-title">Danh sách nhân viên</div>
                 <div class="m-page-button">
-                    <button id="show-dialog" class="m-btn m-btn-icon m-btn-icon-add">Thêm mới nhân viên</button>
+                    <button id="btn-add" class="m-btn m-btn-icon m-btn-icon-add">Thêm mới nhân viên</button>
                 </div>
             </div>
             <div class="m-page-toolbar">
@@ -133,20 +133,58 @@
                         </div>
                     </div>   
             </div>
-            <div class="m-dialog">
+            <div id="dialogadd" class="m-dialog">
                 <div class="m-dialog-content">
-                    1. bạn có muốn xóa không
+                    <div class="m-dialog-header">
+                        <div class="m-dialog-title">
+                            Thông tin chi tiết nhân viên
+                        </div>
+                        <button id="dialog-close" class="m-dialog-close">
+                                X
+                        </button>
+                    </div>
+                    <div class="m-dialog-body">
+                        <label for="">Mã nhân viên</label>
+                        <div class="m-row">
+                            <input id="txtEmployeeCode" class="m-input" placeholder="Nhập mã nhân viên"/>
+                        </div>
+                        <label for="">Họ và tên</label>
+                        <div class="m-row">
+                            <input id="txtEmployeeName" class="m-input" placeholder=""/>
+                        </div>
+                        <label for="">Địa chỉ</label>
+                        <div class="m-row">
+                            <input id="txtAddress" class="m-input m-input-error" placeholder=""/>
+                        </div>
+                        <label for="">Ngày sinh</label>
+                        <div class="m-row">
+                            <input id="dtDateOfBrith" type="date" class="m-input" placeholder=""/>
+                        </div>
+                        <label for="">Giới tính</label>
+                        <div class="m-row">
+                            <select name="" id="cboGender">
+                                <option value="">Nữ</option>
+                                <option value="">Nam</option>
+                            </select>
+                        </div>
+                        <label for="">Mức lương</label>
+                        <div class="m-row">
+                            <input id="txtSalary" class="m-input" placeholder=""/>
+                        </div>
+                    </div>
+                    <div class="m-dialog-footer">
+                            <button id="btnSave" class="m-btn">Lưu</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- thư viên js -->
     <script src="/js/jquery-3.7.1.min.js"></script>
-
     <!-- js dùng chung -->
     <script src="/js/pagejs/employ.js"></script>
     <script>
-        alert("hello")
+        // alert("hello")
     //      document.getElementById("show-dialog").addEventListener("click",function(){
     //     var toastBox= document.getElementsByClassName("m-dialog")
     //    toastBox[0].style.display="block";

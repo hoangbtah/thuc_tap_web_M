@@ -4,11 +4,15 @@
     color: #333;
     border-width: 1px;
     border-radius: 4px;
-    border-color: #000;
+    /* border-color: #000; */
   
 
 }
 .m-input-focus{
     border-color: #019160;
 
+
+}
+.m-input-error{
+    border-color: red;
 }
