@@ -15,13 +15,20 @@
 
             </div>
             <div class="logo">
-
+                KẾ TOÁN
             </div>
         </div>
         <div class="header-right">
-            
+            <div class="header-right-left">
+                CÔNG TY TINH SẢN XUẤT- THƯƠNG MẠI-DỊCH VỤ QUI PHÚC
+            </div>
+            <div class="header-right-right">
+                Nguyễn Văn mạnh
+                <select name="" id="">
+                    <option value=""></option>
+                </select>
+            </div>
         </div>
-
     </div>
     <div class="main">
         <div class="navbar">
@@ -30,7 +37,7 @@
                     
                 </div>
                 <div class="menu-text">
-                    Danh sách nhân viên
+                    Tổng quan
                 </div>
             </div>
             <div class="menu-item">
@@ -38,14 +45,118 @@
                     
                 </div>
                 <div class="menu-text">
-                    Danh sách nhân viên
+                    Tiền mặt
                 </div>
             </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Tiền gửi
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Mua hàng
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Bán hàng
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Quản lý hóa đơn 
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Kho
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Công cụ dụng cụ
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Tài sản cố định
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Thuế
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Giá thành
+                </div>
+            </div>
+            <!-- <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Tổng hợp
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Ngân sách
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Báo cáo
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-icon m-icon-notice">
+                    
+                </div>
+                <div class="menu-text">
+                    Phân tích tài chính
+                </div>
+            </div> -->
 
         </div>
         <div class="page-content">
             <div class="m-page-header">
-                <div class="m-page-title">Danh sách nhân viên</div>
+                <div class="m-page-title">Nhân viên</div>
                 <div class="m-page-button">
                     <button id="btn-add" class="m-btn m-btn-icon m-btn-icon-add">Thêm mới nhân viên</button>
                 </div>
@@ -53,15 +164,6 @@
             <div class="m-page-toolbar">
                 <div class="m-toolbar-left">
                     <input class="m-input m-btn-icon m-btn-icon-add" placeholder="Tìm kiếm theo"/>
-                    <select name="" id="">
-                        <option value="">Tất cả phòng ban</option>
-                        <option value="">Phòng đào tạo</option>
-                    </select>
-                    <select name="" id="">
-                        <option value="">Tất cả vị trí</option>
-                        <option value="">Giám đốc</option>
-                        <option value="">Nhân viên</option>
-                    </select>
                 </div>
                 <div class="m-toolbar-right">
                     <button class="m-btn-refresh"></button>
@@ -71,65 +173,72 @@
                     <table class="m-table">
                     <thead>
                      <tr>
-                         <th class="m-stt">STT</th>
-                         <th class="m-hoten">Họ và tên</th>
-                         <th class="m-diachi">Địa chỉ</th>
-                         <th class="m-ngaysinh">Ngày sinh</th>
-                         <th class="m-luong">Lương</th>
-                         <th class="m-hoatdong">Hoạt động</th>
+                         <th class="m-stt">MÃ NHÂN VIÊN</th>
+                         <th class="m-hoten">TÊN NHÂN VIÊN</th>
+                         <th class="m-diachi">GIỚI TÍNH</th>
+                         <th class="m-ngaysinh">NGÀY SINH</th>
+                         <th class="m-luong">SỐ CMND</th>
+                         <th class="m-hoatdong">CHỨC DANH</th>
+                         <th>TÊN ĐƠN VỊ</th>
+                         <th>SỐ TÀI KHOẢN</th>
+                         <th>TÊN NGÂN HÀNG</th>
+                         <th>CHI NHÁNH TK NGÂN HÀNG</th>
+                         <th>CHỨC NĂNG</th>
                      </tr>       
                     </thead>     
                     <tbody>
                      <tr>
-                         <td class="m-content-left">1</td>
+                         <td class="m-content-left">01</td>
                          <td class="m-content-left">Bùi Việt Hoàng</td>
-                         <td class="m-content-left">Thái Bình</td>
+                         <td class="m-content-left">NAM</td>
                          <td class="m-content-center">18/08/2002</td>
-                         <td class="m-content-right" >10.000.000</td>
-                         <td class="m-content-center">
-                             <input type="checkbox" checked/>
+                         <td class="m-content-right" >56789</td>
+                         <td>Nhân viên</td>
+                         <td>Vận hành tại hà nội</td>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                         <td>Sửa
+                            <select name="" id="">
+                                <option value="">
+
+                                </option>
+                            </select>
                          </td>
                      </tr>
-                     <tr>
-                         <td class="m-content-left">1</td>
-                         <td class="m-content-left">Bùi Việt Hoàng</td>
-                         <td class="m-content-left">Thái Bình</td>
-                         <td class="m-content-center">18/08/2002</td>
-                         <td class="m-content-right" >10.000.000</td>
-                         <td class="m-content-center">
-                             <input type="checkbox" checked/>
-                         </td>
-                     </tr>
-                     <tr>
-                         <td class="m-content-left">1</td>
-                         <td class="m-content-left">Bùi Việt Hoàng</td>
-                         <td class="m-content-left">Thái Bình</td>
-                         <td class="m-content-center">18/08/2002</td>
-                         <td class="m-content-right" >10.000.000</td>
-                         <td class="m-content-center">
-                             <input type="checkbox" checked/>
-                         </td>
-                     </tr>
+                    
                     </tbody>
                     </table>
                     <div class="m-page">
                         <div class="m-page-left">
-                            Trang
+                            Tổng số:1035 bản ghi
                         </div>
-                        <div class="m-page-center ">
+                        <!-- <div class="m-page-center ">
                             <button class="m-page-selected">1</button>
                             <button >2</button>
                             <button >3</button>
                             <button >4</button>
                            
-                        </div>
+                        </div> -->
                         <div class="m-page-right">
-                            Tìm trong khoảng
-                            <select name="" id="">
-                                <option>5</option>
-                                <option>10</option>
-                                <option>15</option>
-                            </select>
+                            <div class="m-number-page">
+                                <select name="" id="">
+                                    <option>10 bản ghi trên 1 trang</option>
+                                    <option>20 bản ghi trên 1 trang</option>
+                                    <option>30 bản ghi trên 1 trang</option>
+                                    <option>50 bản ghi trên 1 trang</option>
+                                    <option>100 bản ghi trên 1 trang</option>
+                                </select>
+                            </div>
+                            <div class="m-number">
+                                <label for="">Trước</label>
+                                <button class="m-page-selected">1</button>
+                            <button >2</button>
+                            <button >3</button>
+                            <button >4</button>
+                            <label for="">Sau</label>
+                            </div>
+                           
                         </div>
                     </div>   
             </div>
@@ -146,15 +255,15 @@
                     <div class="m-dialog-body">
                         <label for="">Mã nhân viên</label>
                         <div class="m-row">
-                            <input id="txtEmployeeCode" class="m-input" placeholder="Nhập mã nhân viên"/>
+                            <input id="txtEmployeeCode" required class="m-input" placeholder="Nhập mã nhân viên"/>
                         </div>
                         <label for="">Họ và tên</label>
                         <div class="m-row">
-                            <input id="txtEmployeeName" class="m-input" placeholder=""/>
+                            <input required id="txtEmployeeName" class="m-input" placeholder=""/>
                         </div>
                         <label for="">Địa chỉ</label>
                         <div class="m-row">
-                            <input id="txtAddress" class="m-input m-input-error" placeholder=""/>
+                            <input id="txtAddress" class="m-input" placeholder=""/>
                         </div>
                         <label for="">Ngày sinh</label>
                         <div class="m-row">

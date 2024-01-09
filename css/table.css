@@ -6,6 +6,12 @@
    
 
 }
+.m-table tr th{
+    font-family:Googlesand Bolds ;
+}
+.m-table tr td{
+    font-family: Googlesand Regular ;
+}
 .m-table .m-content-left{
     text-align: left;
 }

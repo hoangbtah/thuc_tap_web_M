@@ -44,19 +44,26 @@ $(document).ready(function() {
       //hiển thị trạng thái lỗi validate khi không nhập vào các trường bắt buộc
      
     })
-    $("#txtEmployeeCode").blur(function(){
-      let employeeCode= $("#txtEmployeeCode").val();
-      if(employeeCode== null||employeeCode===""){
-        
-        $("#txtEmployeeCode").addClass("m-input-error");
-        $("#txtEmployeeCode").attr("title","Thông tin mã nhân viên không được để trống");
-      }
-      else{
-        $("#txtEmployeeCode").removeClass("m-input-error");
-      
-      }
+    $("input[required]").blur(function(){
+     var me=this;
+     validateInputRequired(me);
     })
 })
+function validateInputRequired(input){
+  var me=this;
+  let value= $(input).val();
+      if(value== null||value===""){
+        
+        $(input).addClass("m-input-error");
+        $(input).attr("title","Thông tin này không được để trống");
+      }
+      else{
+        $(input).removeClass("m-input-error");
+      
+      }
+    
+
+}
 // console.log("hello");
 // document.getElementById("show-dialog").addEventListener("click",function(){
 //     var toastBox= document.getElementsByClassName("m-dialog")

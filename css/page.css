@@ -20,18 +20,18 @@
 
 }
 .m-page button{
-    background-color: rgb(60, 212, 14);
-    color: white;
-    border: 1px solid #333;
+   
+    color: #333;
+    border: none;
     width: 24px;
     height: 24px;
-    border-radius: 50%;
+   
 }
 .m-page button:hover{
     background-color: black;
 }
 .m-page .m-page-selected{
-    background-color:blue ;
+    border: 1px solid #333;
 }
 .m-page-grid{
     position: relative;
@@ -40,3 +40,22 @@
     position: absolute;
     bottom: 0;
  }
+ .m-page .m-page-right{
+    display: flex;
+    align-items: center;
+ }
+ .m-page .m-page-right .m-number-page{
+    
+ }
+ .m-page .m-page-right .m-number{
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+ } 
+ .m-page label{
+    margin-left: 12px;
+    margin-right: 12px;
+ }
+
+

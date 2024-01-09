@@ -19,11 +19,17 @@
 .m-page-grid{
     width: 100%;
     height: calc(100% - 96px); 
+    background-color: #fff;
 }
 
 .m-page-header .m-page-button{
     position: absolute;
     right: 0px;
+}
+.m-page-toolbar .m-toolbar-left{
+    position: absolute;
+    right: 0;
+    margin-right: 60px;
 }
 .m-page-toolbar .m-toolbar-right{
     position: absolute;
