@@ -6,6 +6,7 @@
     bottom: 0;
     background-color: rgba(61, 150, 228, 0.452);
     display: none;
+    z-index: 10;
     
     
 }

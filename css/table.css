@@ -49,3 +49,16 @@
 .m-table tr:hover{
     background-color: blanchedalmond;
 }
+.m-grid{
+    position: absolute;
+    top: 0;
+    bottom: 56px;
+    width: 100%;
+    overflow-y: auto;
+}
+.m-table th{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color:#fff;
+}

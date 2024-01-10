@@ -1,8 +1,54 @@
 $(document).ready(function() {
     // thưc hiện load dữ liệu 
-    // gọi api lấy dữ liệu 
+    //1 gọi api lấy dữ liệu 
+    // 2 thực hiện binding dữ liệu lên UI
+    $.ajax({
+      type: "GET",
+      url:  "https://cukcuk.manhnv.net/api/v1/Employees",
+      success: function (response) {
+        debugger;
+        for (let index=0;index <40;index++)
+        {
+          var el=`<tr>
+          <td><input type="checkbox"></td>
+           <td class="m-content-left">01</td>
+           <td class="m-content-left">Bùi Việt Hoàng</td>
+           <td class="m-content-left">NAM</td>
+           <td class="m-content-center">18/08/2002</td>
+           <td class="m-content-right" >56789</td>
+           <td>Nhân viên</td>
+           <td>Vận hành tại hà nội</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td>Sửa
+              <select name="" id="">
+                  <option value="">
+                      
+                  </option>
+                  <option value="">
+                      Nhân bản
+                  </option>
+                  <option value="">
+                      Xóa
+                  </option>
+                  <option value="">
+                      Ngừng sử dụng
+                  </option>
+              </select>
+           </td>
+       </tr>`;
+       $("table#tblEmployee tbody").append(el);
+        }
+       
+      },
+      error: function(response){
+        debugger;
+      }
+    });
+
     // thực hiên gán các sự kiện
-    // nhấn thêm mới 
+    // nhấn thêm mới nv.ne/api/v1/Employeest
     // console.log("them moi");
     $("#btn-add").click(function(){
       // hiển thị form thêm mới 

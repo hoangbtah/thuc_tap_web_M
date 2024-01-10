@@ -39,6 +39,7 @@
 .m-page-grid .m-page{
     position: absolute;
     bottom: 0;
+   
  }
  .m-page .m-page-right{
     display: flex;

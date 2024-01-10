@@ -162,61 +162,65 @@
             </div>
             <div class="m-page-toolbar">
                 <div class="m-toolbar-left">
-                    <input class="m-input m-btn-icon m-btn-icon-add" placeholder="Tìm kiếm theo"/>
+                    <input class="m-input m-btn-icon-right m-btn-icon-add" placeholder="Tìm theo mã,tên nhân viên" style="width: 200px;"/>
                 </div>
                 <div class="m-toolbar-right">
                     <button class="m-btn-refresh"></button>
                 </div>
             </div>
             <div class="m-page-grid">
-                    <table class="m-table">
-                    <thead>
-                     <tr>
-                         <th class="m-stt">MÃ NHÂN VIÊN</th>
-                         <th class="m-hoten">TÊN NHÂN VIÊN</th>
-                         <th class="m-diachi">GIỚI TÍNH</th>
-                         <th class="m-ngaysinh">NGÀY SINH</th>
-                         <th class="m-luong">SỐ CMND</th>
-                         <th class="m-hoatdong">CHỨC DANH</th>
-                         <th>TÊN ĐƠN VỊ</th>
-                         <th>SỐ TÀI KHOẢN</th>
-                         <th>TÊN NGÂN HÀNG</th>
-                         <th>CHI NHÁNH TK NGÂN HÀNG</th>
-                         <th>CHỨC NĂNG</th>
-                     </tr>       
-                    </thead>     
-                    <tbody>
-                     <tr>
-                         <td class="m-content-left">01</td>
-                         <td class="m-content-left">Bùi Việt Hoàng</td>
-                         <td class="m-content-left">NAM</td>
-                         <td class="m-content-center">18/08/2002</td>
-                         <td class="m-content-right" >56789</td>
-                         <td>Nhân viên</td>
-                         <td>Vận hành tại hà nội</td>
-                         <td></td>
-                         <td></td>
-                         <td></td>
-                         <td>Sửa
-                            <select name="" id="">
-                                <option value="">
-                                    
-                                </option>
-                                <option value="">
-                                    Nhân bản
-                                </option>
-                                <option value="">
-                                    Xóa
-                                </option>
-                                <option value="">
-                                    Ngừng sử dụng
-                                </option>
-                            </select>
-                         </td>
-                     </tr>
-                    
-                    </tbody>
-                    </table>
+                    <div class="m-grid">
+                        <table id="tblEmployee" class="m-table">
+                            <thead>
+                             <tr>
+                                <th><input type="checkbox"></th>
+                                 <th class="m-stt">MÃ NHÂN VIÊN</th>
+                                 <th class="m-hoten">TÊN NHÂN VIÊN</th>
+                                 <th class="m-diachi">GIỚI TÍNH</th>
+                                 <th class="m-ngaysinh">NGÀY SINH</th>
+                                 <th class="m-luong">SỐ CMND</th>
+                                 <th class="m-hoatdong">CHỨC DANH</th>
+                                 <th>TÊN ĐƠN VỊ</th>
+                                 <th>SỐ TÀI KHOẢN</th>
+                                 <th>TÊN NGÂN HÀNG</th>
+                                 <th>CHI NHÁNH TK NGÂN HÀNG</th>
+                                 <th>CHỨC NĂNG</th>
+                             </tr>       
+                            </thead>     
+                            <tbody>
+                             <tr>
+                                <td><input type="checkbox"></td>
+                                 <td class="m-content-left">01</td>
+                                 <td class="m-content-left">Bùi Việt Hoàng</td>
+                                 <td class="m-content-left">NAM</td>
+                                 <td class="m-content-center">18/08/2002</td>
+                                 <td class="m-content-right" >56789</td>
+                                 <td>Nhân viên</td>
+                                 <td>Vận hành tại hà nội</td>
+                                 <td></td>
+                                 <td></td>
+                                 <td></td>
+                                 <td>Sửa
+                                    <select name="" id="">
+                                        <option value="">
+                                            
+                                        </option>
+                                        <option value="">
+                                            Nhân bản
+                                        </option>
+                                        <option value="">
+                                            Xóa
+                                        </option>
+                                        <option value="">
+                                            Ngừng sử dụng
+                                        </option>
+                                    </select>
+                                 </td>
+                             </tr>
+                            
+                            </tbody>
+                            </table>
+                    </div>
                     <div class="m-page">
                         <div class="m-page-left">
                             Tổng số:1035 bản ghi
@@ -279,8 +283,8 @@
                                         
                                     </tr>
                                     <tr>
-                                        <td><input class="m-input" type="text"></td>
-                                        <td><input class="m-input"  type="text"></td>
+                                        <td><input class="m-input" id="txtEmployeeCode" type="text" required></td>
+                                        <td><input id="txtEmployeeName" class="m-input"  type="text" required></td>
                                         <td><input class="m-input"  type="date"></td>
                                         <td ><input class=""  type="radio"><label for="">Nam</label> 
                                             <input class=""  type="radio"><label for="">Nữ</label>

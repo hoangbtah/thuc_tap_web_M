@@ -29,7 +29,7 @@
 .m-page-toolbar .m-toolbar-left{
     position: absolute;
     right: 0;
-    margin-right: 60px;
+    margin-right: 80px;
 }
 .m-page-toolbar .m-toolbar-right{
     position: absolute;
@@ -46,6 +46,8 @@
    border: 1px solid #bbb;
    cursor: pointer; 
 }
+
+
 
 
 
