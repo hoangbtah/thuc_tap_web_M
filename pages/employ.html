@@ -176,7 +176,7 @@
                                 <th><input type="checkbox"></th>
                                  <th class="m-stt">MÃ NHÂN VIÊN</th>
                                  <th class="m-hoten">TÊN NHÂN VIÊN</th>
-                                 <th class="m-diachi">GIỚI TÍNH</th>
+                                 <th class="m-gioitinh">GIỚI TÍNH</th>
                                  <th class="m-ngaysinh">NGÀY SINH</th>
                                  <th class="m-luong">SỐ CMND</th>
                                  <th class="m-hoatdong">CHỨC DANH</th>
@@ -203,9 +203,6 @@
                                  <td>Sửa
                                     <select name="" id="">
                                         <option value="">
-                                            
-                                        </option>
-                                        <option value="">
                                             Nhân bản
                                         </option>
                                         <option value="">
@@ -221,17 +218,11 @@
                             </tbody>
                             </table>
                     </div>
+                   
                     <div class="m-page">
                         <div class="m-page-left">
                             Tổng số:1035 bản ghi
                         </div>
-                        <!-- <div class="m-page-center ">
-                            <button class="m-page-selected">1</button>
-                            <button >2</button>
-                            <button >3</button>
-                            <button >4</button>
-                           
-                        </div> -->
                         <div class="m-page-right">
                             <div class="m-number-page">
                                 <select name="" id="">
@@ -280,15 +271,14 @@
                                         <td>Tên </td>
                                         <td>Ngày sinh</td>
                                         <td>Giới tính</td>
-                                        
                                     </tr>
                                     <tr>
                                         <td><input class="m-input" id="txtEmployeeCode" type="text" required></td>
                                         <td><input id="txtEmployeeName" class="m-input"  type="text" required></td>
-                                        <td><input class="m-input"  type="date"></td>
-                                        <td ><input class=""  type="radio"><label for="">Nam</label> 
-                                            <input class=""  type="radio"><label for="">Nữ</label>
-                                            <input class=""  type="radio"><label for="">Khác</label>
+                                        <td><input class="m-input"  type="date" id="txtDateofBrith"></td>
+                                        <td ><input class="" type="radio" value="1" id="txtNam"><label for="">Nam</label> 
+                                            <input class=""  type="radio" value="0" id="txtNu"><label for="">Nữ</label>
+                                            <input class=""  type="radio" value="2" id="txtKhac"><label for="">Khác</label>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -302,12 +292,12 @@
                                         <td style="width:171px;">Ngày cấp</td>
                                     </tr>
                                     <tr>
-                                        <td><select style="width: 400px;" name="" id="">
-                                            <option value="">Phòng nhân sự</option>
-                                            <option value="">Phòng kế toán</option>
+                                        <td><select style="width: 400px;" name="donVi" id="cboDonVi">
+                                            <option value="nhanSu">Phòng nhân sự</option>
+                                            <option value="keToan">Phòng kế toán</option>
                                         </select></td>
-                                        <td><input class="m-input"  type="text"></td>
-                                        <td><input class="m-input"  type="date" name="" id=""></td>
+                                        <td><input class="m-input"  type="text" id="txtsoCMND"></td>
+                                        <td><input class="m-input"  type="date" name="" id="txtngayCap"></td>
                                     </tr>
                             </table>
                         </div>
@@ -320,8 +310,8 @@
                                         
                                     </tr>
                                     <tr>
-                                        <td ><input style="width: 340px;" class="m-input "  type="text"></td>
-                                        <td><input style="width: 340px;" class="m-input "  type="date" name="" id=""></td>
+                                        <td ><input style="width: 340px;" class="m-input" type="text" id="txtPosition"></td>
+                                        <td><input style="width: 340px;" class="m-input "  type="date" name="" id="txtNoiCap"></td>
                                     </tr>
                             </table>
                         </div>
@@ -331,8 +321,7 @@
                                         <td>Địa chỉ</td>
                                     </tr>
                                     <tr>
-                                        
-                                        <td style="width: 800px;" ><input style="width: 740px;" class="m-input"  type="text" name="" id=""></td>
+                                        <td style="width: 800px;" ><input style="width: 740px;" class="m-input"  type="text" name="" id="txtAddress"></td>
                                     </tr>
                             </table>
                         </div>
@@ -344,9 +333,9 @@
                                         <td>Email</td>
                                     </tr>
                                     <tr>
-                                        <td><input class="m-input"  type="text"></td>
-                                        <td><input class="m-input"  type="text"></td>
-                                        <td><input class="m-input"  type="text" ></td>
+                                        <td><input class="m-input"  type="text" id="txtPhoneNumber"></td>
+                                        <td><input class="m-input"  type="text" id="txtPhone"></td>
+                                        <td><input class="m-input"  type="text" id="txtEmail" ></td>
                                     </tr>
                             </table>
                         </div>
@@ -358,39 +347,12 @@
                                         <td>Chi nhánh</td>
                                     </tr>
                                     <tr>
-                                        <td><input class="m-input"  type="text"></td>
-                                        <td><input class="m-input"  type="text"></td>
-                                        <td><input class="m-input"  type="text" ></td>
+                                        <td><input class="m-input"  type="text" id="txtAccountBank"></td>
+                                        <td><input class="m-input"  type="text" id="txtBankName"></td>
+                                        <td><input class="m-input"  type="text" id="txtChiNhanh"></td>
                                     </tr>
                             </table>
                         </div>
-                        <!-- <label for="">Mã nhân viên</label>
-                        <div class="m-row">
-                            <input id="txtEmployeeCode" required class="m-input" placeholder="Nhập mã nhân viên"/>
-                        </div>
-                        <label for="">Họ và tên</label>
-                        <div class="m-row">
-                            <input required id="txtEmployeeName" class="m-input" placeholder=""/>
-                        </div>
-                        <label for="">Địa chỉ</label>
-                        <div class="m-row">
-                            <input id="txtAddress" class="m-input" placeholder=""/>
-                        </div>
-                        <label for="">Ngày sinh</label>
-                        <div class="m-row">
-                            <input id="dtDateOfBrith" type="date" class="m-input" placeholder=""/>
-                        </div>
-                        <label for="">Giới tính</label>
-                        <div class="m-row">
-                            <select name="" id="cboGender">
-                                <option value="">Nữ</option>
-                                <option value="">Nam</option>
-                            </select>
-                        </div>
-                        <label for="">Mức lương</label>
-                        <div class="m-row">
-                            <input id="txtSalary" class="m-input" placeholder=""/>
-                        </div> -->
                     </div>
                     <div class="m-dialog-footer">
                        <div class="m-dialog-footer-left"> <button id="" class="m-btn m-btn-nocolor ">Hủy</button></div>
@@ -403,22 +365,15 @@
             </div>
         </div>
     </div>
+    <div class="m-loading">
+        <div class="m-loading-icon"></div>
+    </div>
     <!-- thư viên js -->
     <script src="/js/jquery-3.7.1.min.js"></script>
     <!-- js dùng chung -->
     <script src="/js/pagejs/employ.js"></script>
     <script>
-        // alert("hello")
-    //      document.getElementById("show-dialog").addEventListener("click",function(){
-    //     var toastBox= document.getElementsByClassName("m-dialog")
-    //    toastBox[0].style.display="block";
-    //    setTimeout(()=>{
-    //     toastBox[0].style.display="none";
-    //    },3000
-    //    );
-    //  })
-    </script> -->
-    <!-- js dùng riêng cho trang
-    
+    </script> 
+    <!-- js dùng riêng cho trang-->
 </body>
 </html>
