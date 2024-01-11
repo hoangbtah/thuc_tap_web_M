@@ -3,9 +3,12 @@ $(document).ready(function() {
     //1 gọi api lấy dữ liệu 
     // loading dữ liệu
     loadData();
+    var forMode="edit";
+    var employForUpdate=null;
     // thực hiên gán các sự kiện
     // nhấn thêm mới nv.ne/api/v1/Employeest
     $("#btn-add").click(function(){
+      forMode="add";
       // 3 hiển thị form thêm mới 
       $("#dialogadd").show();
       // focus vào ô nhập liệu đầu tiên
@@ -18,7 +21,16 @@ $(document).ready(function() {
     })
     // 5 nhấn đúp chuột khi chọn dòng để hiển thị form 
     $(".m-table").on("dblclick","tr",function(){
-      $("#dialogadd").show();
+      forMode="edit";
+      // lấy dữ liệu ở dòng lên form 
+        let employee= $(this).data("entity");
+        employForUpdate=employee.EmployeeId;
+        $("#txtEmployeeCode").val(employee.EmployeeCode);
+        $("#txtEmployeeName").val(employee.FullName);
+        $("#dtDateOfBrith").val(employee.DateOfBirth);
+        // hiển thị form 
+
+        $("#dialogadd").show();
     })
     // 6 validate dữ liệu khi ấn lưu
     $("#btnSave").click(function(){
@@ -65,23 +77,50 @@ $(document).ready(function() {
         "PositionName":eployeePosition,
         "DepartmentName":donVi
       }
-      // 3 gọi api thực hiện thêm mới
-      $.ajax({
-        type: "POST",
-        url: "https://cukcuk.manhnv.net/api/v1/Employees",
-        data: JSON.stringify(employee),
-        dataType: "json",
-        contentType:"application/json",
-        success: function (response) {
-          $(".m-loading").hide();
-          $("#dialogadd").hide();
-          loadData();
-        },
-        error:function (response) {
 
-          }
-      });
-      // hiển thị loading 
+      // 3 gọi api thực hiện thêm mới
+       // hiển thị loading 
+       $(".m-loading").show();
+       if(forMode=="add")
+       {
+        $.ajax({
+          type: "POST",
+          url: "https://cukcuk.manhnv.net/api/v1/Employees",
+          data: JSON.stringify(employee),
+          dataType: "json",
+          contentType:"application/json",
+          success: function (response) {
+             // sau khi thực hiên thêm xong thì ẩn loading , ẩn form chi tiết, loading lại dữ liệu
+            $(".m-loading").hide();
+            $("#dialogadd").hide();
+            loadData();
+          },
+          error:function (response) {
+              // alert(response.responseJSON.userMsg);
+              $(".m-loading").hide();
+            }
+        });
+       }
+       else{
+        $.ajax({
+          type: "PUT",
+          url: `https://cukcuk.manhnv.net/api/v1/Employees/${employForUpdate}`,
+          data: JSON.stringify(employee),
+          dataType: "json",
+          contentType:"application/json",
+          success: function (response) {
+             // sau khi thực hiên thêm xong thì ẩn loading , ẩn form chi tiết, loading lại dữ liệu
+            $(".m-loading").hide();
+            $("#dialogadd").hide();
+            loadData();
+          },
+          error:function (response) {
+             // alert(response.responseJSON.userMsg);
+              $(".m-loading").hide();
+            }
+        });
+       }
+      
       // sau khi thực hiên thêm xong thì ẩn loading , ẩn form chi tiết, loading lại dữ liệu
 
 
@@ -95,6 +134,7 @@ $(document).ready(function() {
      validateInputRequired(me);
     })
 })
+// validate dữ liệu
 function validateInputRequired(input){
   var me=this;
   let value= $(input).val();
@@ -107,9 +147,8 @@ function validateInputRequired(input){
         $(input).removeClass("m-input-error");
       
       }
-    
-
 }
+// loading dữ liệu
 function loadData(){
   $("table#tblEmployee tbody").empty();
   $(".m-loading").show();
@@ -143,7 +182,7 @@ function loadData(){
         else{
           employeedob="";
         }
-        var el=`<tr>
+        var el=$(`<tr>
         <td><input type="checkbox"></td>
          <td class="m-content-left">${employeeCode}</td>
          <td class="m-content-left">${employName}</td>
@@ -171,7 +210,8 @@ function loadData(){
                 </option>
             </select>
          </td>
-     </tr>`;
+     </tr>`);
+     el.data("entity",employee);
      $("table#tblEmployee tbody").append(el);
      $(".m-loading").hide();
       }
