@@ -123,13 +123,26 @@
             </div>
         </div>
     </div>
+    <div class="m-button-options">
+        
+        <div class="m-show-options">
+            <label for="">Sửa</label>
+            <button id="m-show">Show</button>
+            <div class="m-btn-options-list" style="display: none;">
+                <div class="m-option-item">Nhân bản</div>
+                <div class="m-option-item">Xóa</div>
+                <div class="m-option-item">Ngưng sử dụng</div>
+                </div>
+        </div>
+    </div>
     <script>
-     document.getElementById("showtoast").addEventListener("click",function(){
-        var toastBox= document.getElementsByClassName("m-toast-box")
+
+     document.getElementById("m-show").addEventListener("click",function(){
+        var toastBox= document.getElementsByClassName("m-btn-options-list")
        toastBox[0].style.display="block";
        setTimeout(()=>{
         toastBox[0].style.display="none";
-       },3000
+       },10000
        );
      })
      document.getElementById("show-dialog").addEventListener("click",function(){

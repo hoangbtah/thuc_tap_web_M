@@ -46,6 +46,15 @@
    border: 1px solid #bbb;
    cursor: pointer; 
 }
+/* .m-show-options{
+   display: flex;
+} */
+.m-show-options .m-btn-show{
+    position: relative;
+    display: flex;
+   
+}
+
 
 
 

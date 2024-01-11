@@ -19,6 +19,17 @@ $(document).ready(function() {
       // ẩn form thêm mới 
       $("#dialogadd").hide();
     })
+    // ấn buttom show để xem chức năng
+    $(".m-table").on("click","button",function(){
+      $("#optionlist").show();
+        // $("m-btn-options-list").show();
+    })
+  //  ấn vào vị trí bên ngoài để ẩn chức năng
+  $(".m-table").on("click","#hideoption",function(){
+    $("#optionlist").hide();
+      // $("m-btn-options-list").show();
+  })
+    
     // 5 nhấn đúp chuột khi chọn dòng để hiển thị form 
     $(".m-table").on("dblclick","tr",function(){
       forMode="edit";
@@ -29,7 +40,6 @@ $(document).ready(function() {
         $("#txtEmployeeName").val(employee.FullName);
         $("#dtDateOfBrith").val(employee.DateOfBirth);
         // hiển thị form 
-
         $("#dialogadd").show();
     })
     // 6 validate dữ liệu khi ấn lưu
@@ -194,61 +204,25 @@ function loadData(){
          <td></td>
          <td></td>
          <td></td>
-         <td>Sửa
-            <select name="" id="">
-                <option value="">
-                    
-                </option>
-                <option value="">
-                    Nhân bản
-                </option>
-                <option value="">
-                    Xóa
-                </option>
-                <option value="">
-                    Ngừng sử dụng
-                </option>
-            </select>
+         <td>
+         <div class="m-show-options">
+                <div class="m-btn-show">
+                   <div><label for="">Sửa</label></div>
+                    <div><button id="m-show">Show</button></div>
+                </div> 
+                <div id="optionlist"        class="m-btn-options-list">
+                  <div class="m-option-item">Nhân bản</div>
+                  <div id="hideoption" class="m-option-item">Xóa</div>
+                  <div class="m-option-item">Ngưng sử dụng</div>
+                 </div>
+         </div>
+         
          </td>
      </tr>`);
      el.data("entity",employee);
      $("table#tblEmployee tbody").append(el);
      $(".m-loading").hide();
       }
-    //   for (let index=0;index <40;index++)
-    //   {
-    //     var el=`<tr>
-    //     <td><input type="checkbox"></td>
-    //      <td class="m-content-left">01</td>
-    //      <td class="m-content-left">Bùi Việt Hoàng</td>
-    //      <td class="m-content-left">NAM</td>
-    //      <td class="m-content-center">18/08/2002</td>
-    //      <td class="m-content-right" >56789</td>
-    //      <td>Nhân viên</td>
-    //      <td>Vận hành tại hà nội</td>
-    //      <td></td>
-    //      <td></td>
-    //      <td></td>
-    //      <td>Sửa
-    //         <select name="" id="">
-    //             <option value="">
-                    
-    //             </option>
-    //             <option value="">
-    //                 Nhân bản
-    //             </option>
-    //             <option value="">
-    //                 Xóa
-    //             </option>
-    //             <option value="">
-    //                 Ngừng sử dụng
-    //             </option>
-    //         </select>
-    //      </td>
-    //  </tr>`;
-    //  $("table#tblEmployee tbody").append(el);
-    //   }
-     
     },
     error: function(response){
       debugger;

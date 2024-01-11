@@ -188,7 +188,7 @@
                              </tr>       
                             </thead>     
                             <tbody>
-                             <tr>
+                             <!-- <tr>
                                 <td><input type="checkbox"></td>
                                  <td class="m-content-left">01</td>
                                  <td class="m-content-left">Bùi Việt Hoàng</td>
@@ -200,21 +200,19 @@
                                  <td></td>
                                  <td></td>
                                  <td></td>
-                                 <td>Sửa
-                                    <select name="" id="">
-                                        <option value="">
-                                            Nhân bản
-                                        </option>
-                                        <option value="">
-                                            Xóa
-                                        </option>
-                                        <option value="">
-                                            Ngừng sử dụng
-                                        </option>
-                                    </select>
+                                 <td>
+                                     <div class="m-show-options">
+                                    <div><label for="">Sửa</label></div>
+                                    <div><button id="m-show">Show</button>
+                                        <div class="m-btn-options-list" >
+                                            <div class="m-option-item">Nhân bản</div>
+                                            <div class="m-option-item">Xóa</div>
+                                            <div class="m-option-item">Ngưng sử dụng</div>
+                                        </div></div>
+                                </div>
                                  </td>
                              </tr>
-                            
+                             -->
                             </tbody>
                             </table>
                     </div>
@@ -303,11 +301,9 @@
                         </div>
                         <div class="m-row-3">
                             <table>
-                               
                                     <tr>
                                         <td>Chức danh</td>
                                         <td>Nơi cấp</td>
-                                        
                                     </tr>
                                     <tr>
                                         <td ><input style="width: 340px;" class="m-input" type="text" id="txtPosition"></td>
@@ -373,6 +369,14 @@
     <!-- js dùng chung -->
     <script src="/js/pagejs/employ.js"></script>
     <script>
+    //       document.getElementById("m-show").addEventListener("click",function(){
+    //     var toastBox= document.getElementsByClassName("m-btn-options-list")
+    //    toastBox[0].style.display="block";
+    //    setTimeout(()=>{
+    //     toastBox[0].style.display="none";
+    //    },10000
+    //    );
+    //  })
     </script> 
     <!-- js dùng riêng cho trang-->
 </body>
