@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../css/main.css" />
-    <script src="/js/pagejs/main.js"></script>
+   
 </head>
 <body>
     <div class="m-button">
@@ -135,6 +135,70 @@
                 </div>
         </div>
     </div>
+    <select name="" id="">
+        <option style="display: none;" value="">Sửa</option>
+        <option value="">Xóa</option>
+        <option value="">Nhân bản</option>
+        <option value="">Ngưng sử dụng</option>
+
+    </select>
+    <div class="m-row">
+        <label for="">1.button</label>
+        <div class="m-row">
+            <button id="btn-show-dialog-empty" class="m-btn">Không để trống dữ liệu</button>
+        </div>
+    </div>
+    </div>
+    <div id="show-dialog-empty" class="m-dialog">
+        <div class="m-dialog-empty-content">
+            <div class="m-dialog-empty-header  m-btn-icon m-btn-icon-add">
+                Tên không được để trống
+            </div>
+            <div class="m-dialog-empty-btn"><button id="m-btn-hide-dialog-empty" class="m-btn">Đóng</button></div>
+        </div>
+    </div>
+    <div class="m-row">
+        <label for="">1.button tồn tại mã trong hệ thông</label>
+        <div class="m-row">
+            <button id="btn-show-dialog-exits-code" class="m-btn">Mã nhân viên đã tồn tại trong hệ thống, vui lòng kiểm tra lại</button>
+        </div>
+    </div>
+    </div>
+
+    <div id="show-dialog-exits-code" class="m-dialog">
+        <div class="m-dialog-exits-code-content">
+            <div class="m-dialog-exits-code-header  m-btn-icon m-btn-icon-add">
+               <label for=""> Mã nhân viên đã tồn tại trong hệ thống, vui lòng kiểm tra lại</label>
+            </div>
+            <div class="m-dialog-exits-code-btn"><button id="m-btn-hide-dialog-exits-code" class="m-btn">Đồng ý</button></div>
+        </div>
+    </div>
+
+    <div class="m-row">
+        <label for="">1.xác nhận xóa</label>
+        <div class="m-row">
+            <button id="btn-show-dialog-confirm-del" class="m-btn">xác nhân xóa</button>
+        </div>
+    </div>
+    </div>
+    <div id="show-dialog-confirm-del" class="m-dialog">
+        <div class="m-dialog-confirm-del-content">
+            <div class="m-dialog-confirm-del-header  m-btn-icon m-btn-icon-add">
+               <label for="">Bạn có thực sự muốn xóa không</label>
+            </div>
+            <div class="m-dialog-confirm-del-btn">
+                <div class="m-dialog-confirm-del-no">
+                    <button id="m-dialog-confirm-del-no" class="m-btn m-btn-nocolor">Không</button>
+                </div>
+                <div class="m-dialog-confirm-del-yes">
+                    <button id="m-dialog-confirm-del-yes" class="m-btn">Có</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery-3.7.1.min.js"></script>
+    <!-- js dùng chung -->
+    <script src="/js/pagejs/main.js"></script>
     <script>
 
      document.getElementById("m-show").addEventListener("click",function(){
@@ -147,6 +211,14 @@
      })
      document.getElementById("show-dialog").addEventListener("click",function(){
         var toastBox= document.getElementsByClassName("m-dialog")
+       toastBox[0].style.display="block";
+       setTimeout(()=>{
+        toastBox[0].style.display="none";
+       },3000
+       );
+     })
+     document.getElementById("show-dialog-empty").addEventListener("click",function(){
+        var toastBox= document.getElementsByClassName("m-dialog-empty")
        toastBox[0].style.display="block";
        setTimeout(()=>{
         toastBox[0].style.display="none";
