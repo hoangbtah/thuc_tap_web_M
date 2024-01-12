@@ -21,7 +21,7 @@
     align-items: center;
     position: relative;
 }
-.header .header-right .header-right-left{
+/* .header .header-right .header-right-left{
     position: absolute;
     background-image: url(/assets/img/favicon.ico);
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
     padding-left: 40px;
     background-position: 16px center;
 
-}
+} */
 .header .header-right .header-right-right{
     position: absolute;
     right: 0;
@@ -37,14 +37,13 @@
 .header .header-left .sibar{
     width: 24px;
     height: 24px;
-    background-color: #000;
     flex-shrink: 0;
     margin-right: 10px;
-    background-image: url(/assets/img/logo_menu.png);
+    background-image: url(/assets/img/toggle.png);
     background-position: center;
     background-repeat: no-repeat;
     margin-left: 16px;
-    background-size: 60px;
+    background-size: contain;
 
 }
 .header .header-left .logo{

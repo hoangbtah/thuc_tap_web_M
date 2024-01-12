@@ -36,14 +36,18 @@
     right: 0;
     text-align: right;
 }
-.m-page-toolbar .m-toolbar-right .m-btn-refresh{
+.m-page-toolbar .m-toolbar-right button{
+    background-color: white;
+    border: none;
+}
+.m-page-toolbar .m-toolbar-right .m-icon-refresh{
    width: 44px;
    height: 44px;
-   background-image: url(/assets/img/favicon.ico);
+   background-image: url(/assets/icon/refresh.png);
    background-repeat: no-repeat;
    background-position: center;
-   border-radius: 4px;
-   border: 1px solid #bbb;
+   /* border-radius: 4px; */
+   /* border: 1px solid #bbb; */
    cursor: pointer; 
 }
 /* .m-show-options{

@@ -15,14 +15,10 @@
     background-repeat: no-repeat;
     background-position: 16px center;
     background-size: 16px 16px;
-    padding-left: 40px;
+    /* padding-left: 100px; */
 }
 .m-btn-icon-right{
-    background-repeat: no-repeat;
-    background-position: 200px center;
-    background-size: 16px 16px;
-
-    
+    right: 0;
 }
 .m-btn-icon-add{
     background-image: url(/assets/img/favicon.ico);
