@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="menu-item">
-                <div class="menu-icon m-icon-notice">
+                <div class="menu-icon m-icon-document">
                     
                 </div>
                 <div class="menu-text">
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <div class="menu-item">
-                <div class="menu-icon m-icon-notice">
+                <div class="menu-icon m-icon-document">
                     
                 </div>
                 <div class="menu-text">
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="menu-item">
-                <div class="menu-icon m-icon-notice">
+                <div class="menu-icon m-icon-report">
                     
                 </div>
                 <div class="menu-text">
@@ -72,7 +72,7 @@
                 </div>
             </div>
             <div class="menu-item">
-                <div class="menu-icon m-icon-notice">
+                <div class="menu-icon m-icon-report">
                     
                 </div>
                 <div class="menu-text">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="menu-item">
-                <div class="menu-icon m-icon-notice">
+                <div class="menu-icon m-icon-employees">
                     
                 </div>
                 <div class="menu-text">
@@ -119,7 +119,7 @@
                     Giá thành
                 </div>
             </div>
-            <!-- <div class="menu-item">
+            <div class="menu-item">
                 <div class="menu-icon m-icon-notice">
                     
                 </div>
@@ -127,7 +127,7 @@
                     Tổng hợp
                 </div>
             </div>
-            <div class="menu-item">
+            <!-- <div class="menu-item">
                 <div class="menu-icon m-icon-notice">
                     
                 </div>
@@ -363,7 +363,7 @@
     </div>
     <div class="m-loading">
         <div class="m-loading-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32"><title>32px_dots 06</title><g class="nc-loop_dots-06-32" transform="rotate(45 16 16)"><circle fill="#2ca01c" cx="16" cy="3" r="3"/><circle fill="#2ca01c" cx="25.19239" cy="6.80761" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="29" cy="16" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="25.19239" cy="25.19239" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="16" cy="29" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="6.80761" cy="25.19239" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="3" cy="16" r="3" opacity="0.6"/><circle fill="#2ca01c" cx="6.80761" cy="6.80761" r="3" opacity="0.8"/></g><script>!function(){function t(t){this.element=t,this.animationId,this.start=null,this.init()}if(!window.requestAnimationFrame){var i=null;window.requestAnimationFrame=function(t,n){var e=(new Date).getTime();i||(i=e);var a=Math.max(0,16-(e-i)),o=window.setTimeout(function(){t(e+a)},a);return i=e+a,o}}t.prototype.init=function(){var t=this;this.animationId=window.requestAnimationFrame(t.triggerAnimation.bind(t))},t.prototype.reset=function(){var t=this;window.cancelAnimationFrame(t.animationId)},t.prototype.triggerAnimation=function(t){var i=this;this.start||(this.start=t);var n=t-this.start;800>n||(this.start=this.start+800),this.element.setAttribute("transform","rotate("+parseInt(Math.min(n/100,8))%8*45+" 16 16)");if(document.documentElement.contains(this.element))window.requestAnimationFrame(i.triggerAnimation.bind(i))};var n=document.getElementsByClassName("nc-loop_dots-06-32"),e=[];if(n)for(var a=0;n.length>a;a++)!function(i){e.push(new t(n[i]))}(a);document.addEventListener("visibilitychange",function(){"hidden"==document.visibilityState?e.forEach(function(t){t.reset()}):e.forEach(function(t){t.init()})})}();</script></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32" height="32" viewBox="0 0 32 32"><title>32px_dots 06</title><g class="nc-loop_dots-06-32" transform="rotate(45 16 16)"><circle fill="#2ca01c" cx="16" cy="3" r="3"/><circle fill="#2ca01c" cx="25.19239" cy="6.80761" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="29" cy="16" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="25.19239" cy="25.19239" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="16" cy="29" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="6.80761" cy="25.19239" r="3" opacity="0.4"/><circle fill="#2ca01c" cx="3" cy="16" r="3" opacity="0.6"/><circle fill="#2ca01c" cx="6.80761" cy="6.80761" r="3" opacity="0.8"/></g></svg>
         </div>
     </div>
     <!-- thư viên js -->
@@ -371,15 +371,9 @@
     <!-- js dùng chung -->
     <script src="/js/pagejs/employ.js"></script>
     <script>
-    //       document.getElementById("m-show").addEventListener("click",function(){
-    //     var toastBox= document.getElementsByClassName("m-btn-options-list")
-    //    toastBox[0].style.display="block";
-    //    setTimeout(()=>{
-    //     toastBox[0].style.display="none";
-    //    },10000
-    //    );
-    //  })
-    </script> 
+        // trạng thái loading dữ liệu
+    !function(){function t(t){this.element=t,this.animationId,this.start=null,this.init()}if(!window.requestAnimationFrame){var i=null;window.requestAnimationFrame=function(t,n){var e=(new Date).getTime();i||(i=e);var a=Math.max(0,16-(e-i)),o=window.setTimeout(function(){t(e+a)},a);return i=e+a,o}}t.prototype.init=function(){var t=this;this.animationId=window.requestAnimationFrame(t.triggerAnimation.bind(t))},t.prototype.reset=function(){var t=this;window.cancelAnimationFrame(t.animationId)},t.prototype.triggerAnimation=function(t){var i=this;this.start||(this.start=t);var n=t-this.start;800>n||(this.start=this.start+800),this.element.setAttribute("transform","rotate("+parseInt(Math.min(n/100,8))%8*45+" 16 16)");if(document.documentElement.contains(this.element))window.requestAnimationFrame(i.triggerAnimation.bind(i))};var n=document.getElementsByClassName("nc-loop_dots-06-32"),e=[];if(n)for(var a=0;n.length>a;a++)!function(i){e.push(new t(n[i]))}(a);document.addEventListener("visibilitychange",function(){"hidden"==document.visibilityState?e.forEach(function(t){t.reset()}):e.forEach(function(t){t.init()})})}();
+    </script>
     <!-- js dùng riêng cho trang-->
 </body>
 </html>

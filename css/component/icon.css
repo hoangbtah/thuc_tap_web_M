@@ -33,4 +33,40 @@
     background-size: 16px;
     background-position: center;
 }
+.m-icon-document{
+    background-image: url(/assets/icon/document-online.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+}
+.m-icon-employees{
+    background-image: url(/assets/icon/dic-employee.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+}
+.m-icon-report{
+    background-image: url(/assets/icon/report.png);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+}
+.m-icon-test{
+    background-image: url(/assets/icon/icon_navbar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    height: 200px;
+
+} 
+.m-icon-test2{
+    background-image: url(/assets/icon/icon_navbar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x:left;
+    background-position-y: center;
+    height: 200px;
+} 
+
 
