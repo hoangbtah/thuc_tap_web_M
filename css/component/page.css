@@ -9,6 +9,7 @@
     position: relative;
     width: 100%;
     align-items: center;
+    background-color: #E9EBEE;
 }
 .m-page .m-page-left{
     position: absolute;

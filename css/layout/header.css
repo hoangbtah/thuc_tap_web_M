@@ -2,6 +2,7 @@
     display: flex;
     height: 48px;
     width: 100%;
+    background-color: #FFFFFF;
    
 }
 .header .header-left{
@@ -21,18 +22,11 @@
     align-items: center;
     position: relative;
 }
-/* .header .header-right .header-right-left{
-    position: absolute;
-    background-image: url(/assets/img/favicon.ico);
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding-left: 40px;
-    background-position: 16px center;
-
-} */
 .header .header-right .header-right-right{
     position: absolute;
+    display: flex;
     right: 0;
+    align-items: center;
 }
 .header .header-left .sibar{
     width: 24px;
@@ -56,5 +50,46 @@
     cursor: pointer;
     padding-left: 40px;
     line-height: 32px;
-    /* margin-left: 12px; */
+}
+.header .header-right-right .header-right-r-user{
+    background-image: url(/assets/img/default-avatar.jpg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+.header .header-right .header-right-left{
+    display: flex;
+    align-items: center;
+}
+.header .header-right .header-right-left .header-right-left-icon{
+    
+    margin-left: 10px;
+}
+.header .header-right .header-right-left .header-right-left-logo{
+    background-image: url(/assets/img/default-avatar.jpg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-left: 24px;
+}
+.header .header-right .header-right-right .header-right-r-icon{
+    margin: 16px;
+}
+.header .header-right .header-right-right .header-right-r-notice{
+    background-image: url(/assets/img/default-avatar.jpg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }

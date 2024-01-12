@@ -3,7 +3,9 @@
     width: 226px;
     flex-shrink: 0;
     /* background-color: aqua; */
-    font-family: Googlesand Regular ;   
+    font-size: 13px;
+    font-family: Googlesand Mediums ;
+    background-color: #FFFFFF;
 }
 .menu-item{
     display: flex;
@@ -17,15 +19,18 @@
 .menu-item:hover{
     background-color: #e5e5e5;
     color: #000;
+    font-family: Googlesand Regular ;
+
 }
 .menu-item.menu-item-focus{
     background-color: #019160;
     color: #fff;
+    font-family: Googlesand Mediums ;
 }
 .menu-item .menu-icon{
     flex-shrink: 0;
-    margin-left: 12px;
-    margin-right: 10px;
+    margin-left: 16px;
+    margin-right: 8px;
     width: 40px;
     height: 40px;
   

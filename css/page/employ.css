@@ -15,6 +15,7 @@
    position: relative;
    display: flex;
    align-items: center;
+   background-color: #fff;
 }
 .m-page-grid{
     width: 100%;
@@ -37,7 +38,7 @@
     text-align: right;
 }
 .m-page-toolbar .m-toolbar-right button{
-    background-color: white;
+    background-color: #fff;
     border: none;
 }
 .m-page-toolbar .m-toolbar-right .m-icon-refresh{

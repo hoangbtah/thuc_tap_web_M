@@ -49,7 +49,10 @@
     border-bottom:1px solid #333 ;
 }
 .m-table tr:hover{
-    background-color: blanchedalmond;
+    background-color: #e5e5e5;
+}
+.m-table tbody tr.m-table-selected{
+    background-color: #019160;
 }
 .m-grid{
     position: absolute;

@@ -4,14 +4,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(132, 139, 145, 0.452);
+    background-color: #bbbbbba1;
     display: none;
     z-index: 10;
 }
 .m-dialog .m-dialog-content{
     position: absolute;
     width: 800px;
-    background-color: blanchedalmond;
+    background-color: #fff;
     transform: translate(-50% ,-50%);
     top: 50%;
     left: 50%;
@@ -140,6 +140,26 @@
    right: 20px;
    position: absolute;
 }
+/* dialog thêm mới  */
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1{
+    display: flex;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-2{
+    display: flex;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-3{
+    display: flex;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-4{
+    display: flex;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-5{
+    display: flex;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-6{
+    display: flex;
+}
+
 
  
 
