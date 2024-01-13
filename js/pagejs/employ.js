@@ -193,22 +193,24 @@ function loadData(){
           employeedob="";
         }
         var el=$(`<tr>
-        <td><input type="checkbox"></td>
+        <td class="m-content-center" ><input type="checkbox"></td>
          <td class="m-content-left">${employeeCode}</td>
          <td class="m-content-left">${employName}</td>
          <td class="m-content-left">${employGender}</td>
          <td class="m-content-center">${employeedob}</td>
-         <td class="m-content-right" >${employeeCMND}</td>
-         <td>${employeePosition}</td>
+         <td class="m-content-left" >${employeeCMND}</td>
+         <td class="m-content-left">${employeePosition}</td>
          <td>${employeeDepartment}</td>
          <td></td>
          <td></td>
          <td></td>
-         <td>
-         <div class="m-show-options">
+         <td class="m-content-center">
+         <div class="m-show-options m-content-center">
                 <div class="m-btn-show">
                    <div><label for="">Sửa</label></div>
-                    <div><button id="m-show">Show</button></div>
+                    <div><button id="m-show"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg></button></div>
                 </div> 
                 <div id="optionlist"        class="m-btn-options-list">
                   <div class="m-option-item">Nhân bản</div>

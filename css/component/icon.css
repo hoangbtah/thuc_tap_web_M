@@ -74,5 +74,11 @@
     background-size: 16px;
     background-position: center;
 }
+.m-icon-cancel{
+    background-image: url(/assets/icon/x.svg);
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: center;
+}
 
 

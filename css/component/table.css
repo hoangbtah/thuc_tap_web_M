@@ -21,24 +21,30 @@
 }
 .m-table .m-content-center{
     text-align: center;
+    align-items: center;
 }
 .m-table .m-content-right{
     text-align: right;
 }
-.m-table .m-stt{
-    width: 15px;
+.m-table .m-option{
+    text-align: center;
+    min-width: 50px;
+}
+.m-table .m-employee-code{
+   min-width: 15px;
 }
 .m-table .m-hoten{
     width: 200px;
 }
 .m-table .m-gioitinh{
-    width: 100px;
+    min-width: 30px;
 }
 .m-table .m-ngaysinh{
-    width: 100px;
+    min-width: 100px;
 }
-.m-table .m-luong{
-    width: 100px;
+.m-table .m-cmnd{
+    min-width: 100px;
+
 }
 .m-table .m-hoatdong{
     width: 20px;
