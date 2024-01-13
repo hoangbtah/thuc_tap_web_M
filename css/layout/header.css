@@ -71,13 +71,9 @@
     margin-left: 10px;
 }
 .header .header-right .header-right-left .header-right-left-logo{
-    background-image: url(/assets/img/default-avatar.jpg);
-    background-repeat: no-repeat;
-    background-size: 30px;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    flex-shrink: 0;
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -498px -1029px;
+	width: 16px;
+	height: 14px;
     margin-right: 10px;
     margin-left: 24px;
 }
@@ -85,11 +81,10 @@
     margin: 16px;
 }
 .header .header-right .header-right-right .header-right-r-notice{
-    background-image: url(/assets/img/default-avatar.jpg);
-    background-repeat: no-repeat;
-    background-size: 24px;
     background-position: center;
-    width: 24px;
-    height: 24px;
     flex-shrink: 0;
+
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -844px -520px;
+	width: 18px;
+	height: 19px;
 }

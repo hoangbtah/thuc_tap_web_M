@@ -6,6 +6,7 @@
     font-size: 13px;
     font-family: Googlesand Mediums ;
     background-color: #FFFFFF;
+    overflow-y: auto;
 }
 .menu-item{
     display: flex;
@@ -31,8 +32,9 @@
     flex-shrink: 0;
     margin-left: 16px;
     margin-right: 8px;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
+    align-items: center;
   
 }
 .menu-item .menu-text{

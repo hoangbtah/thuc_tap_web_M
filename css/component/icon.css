@@ -4,11 +4,15 @@
     background-size: contain;
 }
 .m-icon-notice{
-    background-image: url(/assets/img/favicon.ico);
-    background-repeat: no-repeat;
-    background-size: 20000px;
-    background-position: 200px -100px;
+    background-position: center;
+    flex-shrink: 0;
+
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -844px -520px;
+	width: 18px;
+	height: 19px;
+    
 }
+
 .m-icon-logo{
     background-image: url(/assets/img/favicon.ico);
     background-repeat: no-repeat;
@@ -33,6 +37,46 @@
     background-size: 20px;
     background-position: center;
 }
+.m-icon-tien-mat{
+    background: url(/assets/img/Sprites.64af8f61.svg) no-repeat -78px -1631px;
+}
+.m-icon-tien-gui{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -121px -1633px;
+}
+.m-icon-mua-hang{
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -165px -1632px;
+}
+.m-icon-ban-hang{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -206px -1631px;
+}
+.m-icon-quan-ly-hd{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -254px -1632px;
+}
+.m-icon-kho{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -294px -1632px;
+}
+.m-icon-cong-cu{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -339px -1633px;
+}
+.m-icon-tai-san{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -382px -1632px;
+}
+.m-icon-thue{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -427px -1634px;
+}
+.m-icon-gia-thanh{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -470px -1633px;
+}
+.m-icon-tong-hop{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -514px -1632px;
+}
+.m-icon-ngan-sach{
+    background: url('/assets/img/Sprites.64af8f61.svg')  no-repeat -552px -1636px;
+}
+.m-icon-phan-tich-tai-chinh{
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -636px -1631px;
+}
+
 .m-icon-document{
     background-image: url(/assets/icon/document-online.png);
     background-repeat: no-repeat;
@@ -51,23 +95,6 @@
     background-size: 20px;
     background-position: center;
 }
-.m-icon-test{
-    background-image: url(/assets/icon/icon_navbar.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
-    height: 200px;
-
-} 
-.m-icon-test2{
-    background-image: url(/assets/icon/icon_navbar.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x:left;
-    background-position-y: center;
-    height: 200px;
-} 
 .m-icon-default-avatar{
     background-image: url(/assets/img/default-avatar.jpg);
     background-repeat: no-repeat;
