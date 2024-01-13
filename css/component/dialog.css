@@ -17,17 +17,22 @@
     left: 50%;
     padding: 24px;
 }
-.m-dialog .m-dialog-header{
-    width: 100%;
-    /* padding: 24px; */
+.m-dialog .m-dialog-content .m-dialog-header{
+    margin: 24px;
     display: flex;
     align-items: center;
+    background-color: aquamarine;
+    position: relative;
 }
-.m-dialog .m-dialog-header .m-dialog-title{
+.m-dialog .m-dialog-content .m-dialog-header .m-dialog-title{
     font-size: 24px;
+    /* position: absolute; */
+    left: 0;
 }
+
 .m-dialog .m-dialog-header label{
     font-family: Googlesand Regular ;
+    font-size: 15px;
 }
 .m-dialog .m-dialog-header button.m-dialog-close{
     position: absolute;
@@ -140,24 +145,98 @@
    right: 20px;
    position: absolute;
 }
-/* dialog thêm mới  */
+/* dialog thêm mới nhân viên */
+.m-dialog .m-dialog-content .m-dialog-body{
+    margin: 24px;
+    background-color: blanchedalmond;
+}
 .m-dialog .m-dialog-content .m-dialog-body .m-row-1{
     display: flex;
+    margin-top: 16px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-left{
+    display: flex;
+    width: 352px;
+    margin-right: 48px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-left .m-dialog-employcode{
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-left .m-dialog-employee-name .m-input{
+    width: 202px;
+    box-sizing: border-box;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-left .m-dialog-employcode .m-input{
+    box-sizing: border-box;
+    width: 134px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-right{
+    display: flex;
+    width: 352px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-right .m-dialog-employee-dob{
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-right .m-dialog-employee-gender .m-input{
+    width: 202px;
+    box-sizing: border-box;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-1-right .m-dialog-employee-dob .m-input{
+    box-sizing: border-box;
+    width: 134px;
 }
 .m-dialog .m-dialog-content .m-dialog-body .m-row-2{
     display: flex;
+    margin-top: 16px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-2 .m-dialog-donvi {
+    padding-right: 48px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-2 .m-dialog-donvi select{
+    width: 352px;
+    box-sizing: border-box;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-2 .m-dialog-cmnd{
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-2 .m-dialog-ngay-cap .m-input{
+    width: 134px;
+    box-sizing: border-box;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-2 .m-dialog-cmnd .m-input{
+    box-sizing: border-box;
+    width: 202px;
 }
 .m-dialog .m-dialog-content .m-dialog-body .m-row-3{
     display: flex;
+    margin-top: 16px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-3 .m-dialog-chuc-danh{
+    margin-right: 48px;
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-3 .m-input{
+    width: 352px;
+    box-sizing: border-box;
 }
 .m-dialog .m-dialog-content .m-dialog-body .m-row-4{
     display: flex;
+    margin-top: 16px;
+   
+}
+.m-dialog .m-dialog-content .m-dialog-body .m-row-4 .m-input{
+    /* width: calc(800px-16px-12px-50px); */
+    width: 722px;
 }
 .m-dialog .m-dialog-content .m-dialog-body .m-row-5{
     display: flex;
+    margin-top: 16px;
 }
 .m-dialog .m-dialog-content .m-dialog-body .m-row-6{
     display: flex;
+    margin-top: 16px;
 }
 
 
