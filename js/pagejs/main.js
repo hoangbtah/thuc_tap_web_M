@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $("#show-toast").click(function(){
+        $(".m-toast-box").show();
+        setTimeout(function(){
+            $(".m-toast-box").hide();
+        }, 3000);
+    })
    showAndHideDialogEmpty();
     showAndHideDialogExitsCode();
     showAndHideDialogConfirmDelete();

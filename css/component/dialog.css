@@ -117,7 +117,9 @@
 }
 .m-dialog .m-dialog-exits-code-content .m-dialog-exits-code-btn button{
    margin:20px 0;
+
 }
+/* // dialog xác nhận xóa  */
 .m-dialog .m-dialog-confirm-del-content{
     position: absolute;
     width: 400px;
@@ -125,26 +127,36 @@
     transform: translate(-50% ,-50%);
     top: 50%;
     left: 50%;
-    padding: 24px;
-    
 }
+
 .m-dialog .m-dialog-confirm-del-content .m-dialog-confirm-del-header{
     border-bottom: 1px solid #333;
     height:50px ;
     word-wrap: break-word;
     position: relative;
+    display: flex;
+    margin: 24px;
+    align-items: center;
 }
 .m-dialog .m-dialog-confirm-del-content .m-dialog-confirm-del-btn
 {
     display: flex;
-    
+    height: 60px;
 }
 .m-dialog .m-dialog-confirm-del-content .m-dialog-confirm-del-btn button{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     /* text-align: center; */
+    height: 40px;
 }
+.m-dialog .m-dialog-confirm-del-content .m-dialog-confirm-del-btn .m-dialog-confirm-del-no {
+    margin-left: 24px;
+    left: 0;
+     position: absolute;
+  }
 .m-dialog .m-dialog-confirm-del-content .m-dialog-confirm-del-btn .m-dialog-confirm-del-yes {
-   right: 20px;
+  margin-right: 24px;
+  right: 0;
    position: absolute;
 }
 /* dialog thêm mới nhân viên */
@@ -247,7 +259,9 @@
 .m-dialog .m-dialog-content .m-dialog-body .m-row-6 .m-input{
     margin-right: 16px;
 }
-
+.m-dialog .required{
+    color: red;
+}
 
 
  

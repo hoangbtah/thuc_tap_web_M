@@ -113,5 +113,11 @@
     background-size: 24px;
     background-position: center;
 }
+.m-icon-confirm-delete{
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -817px -145px;
+	width: 24px;
+	height: 24px;
+    margin-right: 10px;
+}
 
 

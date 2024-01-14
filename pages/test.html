@@ -37,8 +37,6 @@
       <th>Email</th>
       <th>Selection</th>
       <th>Functions</th>
-      <button>Nhân bản</button>
-      <label for="">Xóa</label>
     </tr>
   </thead>
   <tbody>
@@ -56,7 +54,11 @@
     <button class="remove-function"></button>
   </div>
 </div>
-
+<div id="optionlist" class="m-btn-options-list">
+  <div class="m-option-item"><label for="">Nhân bản</label></div>
+  <div id="hideoption" class="m-option-item"><label for="">Xóa</label></div>
+  <div class="m-option-item"><label for="">Ngưng sử dụng</label></div>
+ </div>
 <script>
   $(document).ready(function() {
     // Mock API data

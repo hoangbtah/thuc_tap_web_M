@@ -257,11 +257,11 @@
                         <div class="m-row-1">
                            <div class="m-row-1-left">
                             <div class="m-dialog-employcode">
-                                <div><label for="">Mã</label></div>
+                                <div><label for="">Mã</label><i class="required">*</i></div>
                                 <div><input class="m-input" id="txtEmployeeCode" type="text" required></div>
                             </div>
                             <div class="m-dialog-employee-name">
-                                <div><label for="">Tên</label></div>
+                                <div><label for="">Tên<i class="required">*</i></label></div>
                                 <div><input id="txtEmployeeName" class="m-input"  type="text" required></div>
                             </div>
                            </div>
@@ -282,7 +282,7 @@
                         </div>
                         <div class="m-row-2">
                             <div class="m-dialog-donvi">
-                                <div><label for="">Đơn vị</label></div>
+                                <div><label for="">Đơn vị <i class="required">*</i></label></div>
                                 <div><select  name="donVi" id="cboDonVi">
                                     <option value="nhanSu">Phòng nhân sự</option>
                                     <option value="keToan">Phòng kế toán</option>
@@ -343,7 +343,7 @@
                         </div>
                     </div>
                     <div class="m-dialog-footer">
-                       <div class="m-dialog-footer-left"> <button id="" class="m-btn m-btn-nocolor ">Hủy</button></div>
+                       <div class="m-dialog-footer-left"> <button id="m-btn-add-cancle" class="m-btn m-btn-nocolor ">Hủy</button></div>
                         <div class="m-dialog-footer-right">
                             <button id="" class="m-btn m-btn-nocolor m-btn-cat">Cất</button>
                             <button id="btnSave" class="m-btn">Cất và thêm</button>
@@ -362,7 +362,23 @@
         <div class="m-option-item"><label for="">Nhân bản</label></div>
         <div id="hideoption" class="m-option-item"><label for="">Xóa</label></div>
         <div class="m-option-item"><label for="">Ngưng sử dụng</label></div>
-       </div>
+    </div>
+    <div id="show-dialog-confirm-del" class="m-dialog">
+        <div class="m-dialog-confirm-del-content">
+            <div class="m-dialog-confirm-del-header ">
+                <div class="m-icon-confirm-delete"></div>
+               <label for="">Bạn có thực sự muốn xóa không</label>
+            </div>
+            <div class="m-dialog-confirm-del-btn">
+                <div class="m-dialog-confirm-del-no">
+                    <button id="m-dialog-confirm-del-no" class="m-btn m-btn-nocolor">Không</button>
+                </div>
+                <div class="m-dialog-confirm-del-yes">
+                    <button id="m-dialog-confirm-del-yes" class="m-btn">Có</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- thư viên js -->
     <script src="/js/jquery-3.7.1.min.js"></script>
     <!-- js dùng chung -->
