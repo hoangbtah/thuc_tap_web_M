@@ -61,9 +61,14 @@
     text-align: center;
 }
 .m-show-options .m-btn-show{
-    position: relative;
     display: flex;
     justify-content: center;
+}
+.m-btn-show button{
+    width: 20px;
+    height: 10px;
+    margin-left: 5px;
+   border: none;
 }
 
 

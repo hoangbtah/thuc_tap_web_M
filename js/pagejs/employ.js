@@ -20,14 +20,20 @@ $(document).ready(function() {
       $("#dialogadd").hide();
     })
     // ấn buttom show để xem chức năng
-    $(".m-table").on("click","button",function(){
+    $(document).on('click', '.m-show', function() {
+      var buttonPosition = $(this).offset();
+      $('.m-btn-options-list').css({
+        'position': 'absolute',
+        'top': buttonPosition.top + 'px',
+        'left': (buttonPosition.left-100) + 'px',
+      });
+      // console.log("Top: " + buttonPosition.top);
+      // console.log("left"+buttonPosition.left);
       $("#optionlist").show();
-        // $("m-btn-options-list").show();
     })
-  //  ấn vào vị trí bên ngoài để ẩn chức năng
-  $(".m-table").on("click","#hideoption",function(){
+  //  ấn vào nút xóa để ẩn chức năng
+  $(document).on("click","#hideoption",function(){
     $("#optionlist").hide();
-      // $("m-btn-options-list").show();
   })
     
     // 5 nhấn đúp chuột khi chọn dòng để hiển thị form 
@@ -214,16 +220,12 @@ function loadData(){
          <div class="m-show-options m-content-center">
                 <div class="m-btn-show">
                    <div><label for="">Sửa</label></div>
-                    <div><button id="m-show"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg></button></div>
+                    <div><button id="m-show" class="m-show m-icon-show-options">
+                   </button></div>
                 </div> 
-                <div id="optionlist"        class="m-btn-options-list">
-                  <div class="m-option-item"><label for="">Nhân bản</label></div>
-                  <div id="hideoption" class="m-option-item"><label for="">Xóa</label></div>
-                  <div class="m-option-item"><label for="">Ngưng sử dụng</label></div>
-                 </div>
+               
          </div>
+        
          
          </td>
      </tr>`);

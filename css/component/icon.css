@@ -76,6 +76,12 @@
 .m-icon-phan-tich-tai-chinh{
     background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -636px -1631px;
 }
+.m-icon-show-options{
+    background: url('/assets/img/Sprites.64af8f61.svg') no-repeat -900px -365px;
+	width: 20px;
+	height: 20px;
+}
+
 
 .m-icon-document{
     background-image: url(/assets/icon/document-online.png);

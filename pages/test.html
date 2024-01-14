@@ -13,7 +13,7 @@
 
     /* Hide the functions initially */
     .function-list {
-      display: none;
+      /* display: none; */
       list-style: none; /* Remove default list styling */
       padding: 0; /* Remove default padding */
       margin: 5px 0; /* Add margin to separate functions from the table */
@@ -37,6 +37,8 @@
       <th>Email</th>
       <th>Selection</th>
       <th>Functions</th>
+      <button>Nhân bản</button>
+      <label for="">Xóa</label>
     </tr>
   </thead>
   <tbody>
@@ -93,8 +95,6 @@
     // Show functions on button click
     $(document).on('click', '.show-functions-btn', function() {
       var functionsList = $('.function-list');
-      var addFunctionBtn = $('.add-function');
-      var removeFunctionBtn = $('.remove-function');
 
       // Clear existing functions
       functionsList.empty();
@@ -108,9 +108,11 @@
       var buttonPosition = $(this).offset();
       $('.function-container').css({
         'position': 'absolute',
-        'top': buttonPosition.top + 'px',
-        'left': buttonPosition.left + 'px'
+        // 'top': buttonPosition.top + 'px',
+        // 'left': buttonPosition.left + 'px'
       });
+      console.log("Top: " + buttonPosition.top);
+      console.log("tọa độ"+buttonPosition);
 
       functionsList.show();
     //   addFunctionBtn.show();

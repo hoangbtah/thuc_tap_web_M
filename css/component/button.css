@@ -28,18 +28,18 @@
     color: black;
     border: 1px solid #333;
 }
+
 .m-btn-options-list{
     border: 1px solid #333;
     width: 100px;
     z-index: 10000;
-    position: absolute;
     display: none;
     background-color: #fff;
-    margin-right: 40px;
-    right: 0;
-    
 }
-.m-option-item:hover{
+.m-btn-options-list .m-option-item{
+    font-family: Googlesand Regular ;
+}
+.m-btn-options-list .m-option-item:hover{
     background-color:rgb(240, 226, 226);
     color: #31e451;
 }
