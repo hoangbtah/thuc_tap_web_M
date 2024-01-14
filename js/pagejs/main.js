@@ -2,7 +2,31 @@ $(document).ready(function(){
    showAndHideDialogEmpty();
     showAndHideDialogExitsCode();
     showAndHideDialogConfirmDelete();
-})
+    $('.m-table-selected').change(function() {
+        // Find the closest 'tr' (table row) and toggle the 'selected-row' class
+        $(this).closest('tr').toggleClass('m-table-selected', this.checked);
+      });
+    // $("input[checked]").click(function(){
+    //     var me=this;
+    //     validateInputRequired(me);
+    //    })
+    })
+
+
+// validate dữ liệu
+// function validateInputRequired(input){
+//  var me=this;
+//  let value= $(input).val();
+//      if(value== checked||value==="checked"){
+       
+//        $(tr).addClass("m-table-selected");
+      
+//      }
+//      else{
+//        $(input).removeClass("m-table-selected");
+     
+//      }
+// }
 //1 show and hide dialog empty
 function showAndHideDialogEmpty(){
      // show dialog empty

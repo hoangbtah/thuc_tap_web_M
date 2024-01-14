@@ -139,10 +139,16 @@ $(document).ready(function() {
       //hiển thị trạng thái lỗi validate khi không nhập vào các trường bắt buộc
      
     })
-    $("input[required]").blur(function(){
+    $("input[required]").click(function(){
      var me=this;
      validateInputRequired(me);
     })
+    // khi tích vào checkbox thì dòng đó được thay đổi background
+    $(document).on('change', '.m-table-select', function() {
+      // Find the closest 'tr' (table row) and toggle the 'selected-row' class
+      $(this).closest('tr').toggleClass('m-table-selected', this.checked);
+    });
+    // khi tích vào checkbox thì dòng đó được thay đổi background
 })
 // validate dữ liệu
 function validateInputRequired(input){
@@ -193,7 +199,7 @@ function loadData(){
           employeedob="";
         }
         var el=$(`<tr>
-        <td class="m-content-center" ><input type="checkbox"></td>
+        <td class="m-content-center" ><input type="checkbox" class="m-table-select"></td>
          <td class="m-content-left">${employeeCode}</td>
          <td class="m-content-left">${employName}</td>
          <td class="m-content-left">${employGender}</td>
@@ -213,9 +219,9 @@ function loadData(){
                   </svg></button></div>
                 </div> 
                 <div id="optionlist"        class="m-btn-options-list">
-                  <div class="m-option-item">Nhân bản</div>
-                  <div id="hideoption" class="m-option-item">Xóa</div>
-                  <div class="m-option-item">Ngưng sử dụng</div>
+                  <div class="m-option-item"><label for="">Nhân bản</label></div>
+                  <div id="hideoption" class="m-option-item"><label for="">Xóa</label></div>
+                  <div class="m-option-item"><label for="">Ngưng sử dụng</label></div>
                  </div>
          </div>
          

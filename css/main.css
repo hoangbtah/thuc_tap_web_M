@@ -52,7 +52,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: 999;
-    background-color: #f0dfdf;
+    background-color: #fff;
 }
 .m-loading .m-loading-icon{
     position: absolute;

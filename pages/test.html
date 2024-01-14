@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Functions Outside Table</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* Define background color for selected rows */
+    .selected-row {
+      background-color: #ffcccb; /* You can change this color */
+    }
+
+    /* Hide the functions initially */
+    .function-list {
+      display: none;
+      list-style: none; /* Remove default list styling */
+      padding: 0; /* Remove default padding */
+      margin: 5px 0; /* Add margin to separate functions from the table */
+    }
+
+    .function-actions {
+      margin-top: 5px; /* Add margin to separate function actions from the table */
+    }
+
+    .function-actions button {
+      margin-right: 5px; /* Add margin between buttons */
+    }
+  </style>
+</head>
+<body>
+
+<table border="1" id="data-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Selection</th>
+      <th>Functions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Rows will be populated dynamically using jQuery -->
+  </tbody>
+</table>
+
+<div class="function-container">
+  <ul class="function-list">
+    <!-- Functions will be populated dynamically using jQuery -->
+  </ul>
+
+  <div class="function-actions">
+    <button class="add-function"></button>
+    <button class="remove-function"></button>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Mock API data
+    var apiData = [
+      { name: "John Doe", email: "john@example.com", selected: false, functions: ["Function 1", "Function 2"] },
+      { name: "Jane Doe", email: "jane@example.com", selected: false, functions: ["Function 3", "Function 4"] },
+      // Add more data as needed
+    ];
+
+    // Function to render table rows
+    function renderTableRows(data) {
+      var tbody = $('#data-table tbody');
+      tbody.empty(); // Clear existing rows
+
+      $.each(data, function(index, item) {
+        var row = $('<tr>');
+        row.append($('<td>').text(item.name));
+        row.append($('<td>').text(item.email));
+        var checkbox = $('<input>').attr({ type: 'checkbox', class: 'select-row' }).prop('checked', item.selected);
+        row.append($('<td>').append(checkbox).addClass(item.selected ? 'selected-row' : ''));
+        
+        // Add button to show functions
+        var showFunctionsBtn = $('<button>').text('Show Functions').addClass('show-functions-btn');
+        row.append($('<td>').append(showFunctionsBtn));
+
+        // Store functions data in the row for later use
+        row.data('functions', item.functions);
+
+        tbody.append(row);
+      });
+    }
+
+    // Initial rendering of table rows
+    renderTableRows(apiData);
+
+    // Show functions on button click
+    $(document).on('click', '.show-functions-btn', function() {
+      var functionsList = $('.function-list');
+      var addFunctionBtn = $('.add-function');
+      var removeFunctionBtn = $('.remove-function');
+
+      // Clear existing functions
+      functionsList.empty();
+
+      var functions = $(this).closest('tr').data('functions');
+      $.each(functions, function(i, func) {
+        functionsList.append($('<li>').text(func));
+      });
+
+      // Set the same position for the function container as the button
+      var buttonPosition = $(this).offset();
+      $('.function-container').css({
+        'position': 'absolute',
+        'top': buttonPosition.top + 'px',
+        'left': buttonPosition.left + 'px'
+      });
+
+      functionsList.show();
+    //   addFunctionBtn.show();
+    //   removeFunctionBtn.show();
+    });
+
+    // Add function button click event
+    $(document).on('click', '.add-function', function() {
+      var functionsList = $('.function-list');
+      var newFunction = prompt('Enter a new function:');
+      if (newFunction) {
+        functionsList.append($('<li>').text(newFunction));
+      }
+    });
+
+    // Remove function button click event
+    $(document).on('click', '.remove-function', function() {
+      var functionsList = $('.function-list');
+      functionsList.children().last().remove();
+    });
+  });
+</script>
+
+</body>
+</html>
