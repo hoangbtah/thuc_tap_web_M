@@ -1,0 +1,18 @@
+làm việc nhóm với git
+- git pull origin main 
+lấy code mới nhất về
+	tạo nhánh mới 
+- git checkout -b hoang
+- tạo nhánh mới có tên hoàng
+- git branch là kiểm tra đang ở nhánh nào
+viết thêm code mới và đẩy code lên 
+-git push origin hoang , là đẩy code lên nhánh hoang
+- git checkout main ,xem code ở nhánh main 
+- git check out hoang, xem code ở nhánh hoang
+
+làm việc cá nhân với git
+git push origin master đẩy code lên
+git init 
+git add
+git commit -m ''
+git clone 'link'

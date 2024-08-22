@@ -1,0 +1,11 @@
+crtl rr để đổi tên áp dụng cho những cái dùng 
+
+bật dubug 
+crtl alt p 
+gõ iis mở cửa sổ 
+gõ f10 để chạy lần lượt 
+tắt debug dùng shift f5
+
+gõ shift f9 để mở popup
+
+

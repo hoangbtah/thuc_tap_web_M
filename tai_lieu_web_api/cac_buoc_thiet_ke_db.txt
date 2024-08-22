@@ -1,0 +1,147 @@
+B1 Xác định tên bảng : employee
+B2 Khóa chính của bảng 
+Bắt buộc phải có khóa chính :EmployeeId -INT/char(36)
+
+B3 xác định các cột dữ liệu
+1. Tên của cột: danh từ số ít , đối với các cột dữ liệu chính
+thì có thêm tiền tố là tên bảng - convention
+2. kiểu dữ liệu là số chuỗi hay ngày tháng 
+3. độ dài dữ liệu , độ lớn dữ liệu
+4. có bắt buộc nhập hay không (theo yêu cầu nghiệp vụ )
+null/not null
+5. có giá trị mặc định ban đầu hay không
+
+B4 Xác đinh mối quan hệ với các bảng dữ liệu khác 
+1-1 hay 1-n
+khóa chính , khóa ngoài là gì
+
+B5 đánh index cho các côt dữ liệu
+
+lưu ý 
+đối với dữ liệu dạng combobox 
+- nếu dữ liệu có giới hạn số lượng bản ghi như giới tính 
+thì lưu trữ trong database ở dạng số 0= nữ,1=nam
+-nếu dữ liệu không xác định được giới hạn bản ghi thì thiết kế thêm 
+1 bảng dữ liệu liên kết với 1 bảng hiện tại qua khóa 
+ngoài
+
+tên bảng Employee
+
+Id toàn cục char(36)
+bảng vị trí Positions 
+PositionId 
+PositionCode
+PositionName
+CreateDate ngay tao 
+CreateBy nguoi tao
+ModifileDate ngày giờ chỉnh sửa gần nhất 
+modifileBy người chỉnh sửa gần nhất .
+
+bảng phòng ban .
+DepartmentId  chả 36
+DepartmentCode varchar 20 
+DepartmentName varchar 255 
+CreateDate ngay tao 
+CreateBy nguoi tao
+ModifileDate ngày giờ chỉnh sửa gần nhất 
+modifileBy người chỉnh sửa gần nhất .
+các thông tin kia bảng nào cũng phải có
+
+xác định mối quan hệ giữa các bảng 
+CREATE TABLE misa_webhaui_amis.department (
+  DepartmentId char(36) NOT NULL COMMENT 'khóa chính',
+  DepartmentCode varchar(20) NOT NULL COMMENT 'mã phòng ban',
+  DepartmentName varchar(255) NOT NULL COMMENT 'tên phòng ban',
+  CreateDate date DEFAULT NULL COMMENT 'ngày tạo ',
+  CreateBy varchar(255) DEFAULT NULL COMMENT 'người tạo',
+  ModifileDate date DEFAULT NULL COMMENT 'ngày chỉnh sửa gần nhất',
+  ModifileBy varbinary(255) DEFAULT NULL COMMENT 'người chỉnh sửa gần nhất',
+  PRIMARY KEY (DepartmentId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'phòng ban ';
+
+
+CREATE TABLE misa_webhaui_amis.employee (
+  EmployeeId char(36) NOT NULL COMMENT 'khóa chính',
+  EmployeeCode varchar(20) NOT NULL COMMENT 'mã nhân viên',
+  EmployeeName varchar(100) NOT NULL COMMENT 'tên nhân viên',
+  Gender int(11) DEFAULT NULL COMMENT 'giới tính 0 nữ , 1 nam,2 chưa xác định',
+  IdentityCode varchar(25) DEFAULT NULL COMMENT 'số chứng minh nhân dân',
+  IdentityDate date DEFAULT NULL COMMENT 'ngày cấp',
+  `Position` varchar(100) DEFAULT NULL COMMENT 'chức danh',
+  IdentityPlace varchar(255) DEFAULT NULL COMMENT 'Nơi cấp',
+  Address varchar(255) DEFAULT NULL COMMENT 'địa chỉ',
+  PhoneNumber varchar(25) DEFAULT NULL COMMENT 'điện thoại di động',
+  LandlinePhone varchar(25) DEFAULT NULL COMMENT 'điện thoại cố định',
+  Email varchar(100) DEFAULT NULL COMMENT 'địa chỉ email',
+  BankAccount varchar(25) DEFAULT NULL COMMENT 'tài khoản ngân hàng',
+  BankName varchar(255) DEFAULT NULL COMMENT 'Tên ngân hàng',
+  Branch varchar(255) DEFAULT NULL COMMENT 'chi nhánh',
+  CreateDate date DEFAULT NULL COMMENT 'ngày tạo',
+  CreateBy varchar(255) DEFAULT NULL COMMENT 'người tạo',
+  ModifileDate date DEFAULT NULL COMMENT 'ngày chỉnh sửa gần nhất',
+  ModifileBy varchar(255) DEFAULT NULL COMMENT 'Người chỉnh sửa gần nhất',
+  DepartmentId char(36) NOT NULL COMMENT 'khóa ngoài kết nối với bảng phòng ban',
+  PRIMARY KEY (EmployeeId, DepartmentId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'Danh mục nhân viên';
+
+ALTER TABLE misa_webhaui_amis.employee
+ADD CONSTRAINT FK_employee_department FOREIGN KEY (DepartmentId)
+REFERENCES misa_webhaui_amis.department (DepartmentId) ON DELETE NO ACTION;
+
+[ApiController]
+[Route("api/employees")]
+public class EmployeeController : ControllerBase
+{
+    private readonly EmployeeDbContext _dbContext;
+
+    public EmployeeController(EmployeeDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateEmployee(int id, [FromBody] Employee updatedEmployee)
+    {
+        // Kiểm tra xem nhân viên có tồn tại hay không
+        var existingEmployee = await _dbContext.Employees.FirstOrDefaultAsync(e => e.Id == id);
+        if (existingEmployee == null)
+        {
+            return NotFound(); // Trả về mã 404 Not Found nếu không tìm thấy nhân viên
+        }
+
+        // Nếu mã nhân viên đã thay đổi
+        if (existingEmployee.EmployeeId != updatedEmployee.EmployeeId)
+        {
+            // Kiểm tra xem mã nhân viên mới đã tồn tại hay chưa
+            var duplicateEmployee = await _dbContext.Employees
+                .FirstOrDefaultAsync(e => e.EmployeeId == updatedEmployee.EmployeeId);
+
+            if (duplicateEmployee != null)
+            {
+                return BadRequest("Mã nhân viên đã tồn tại cho một nhân viên khác."); // Trả về mã 400 Bad Request nếu trùng mã
+            }
+
+            // Cập nhật mã nhân viên mới
+            existingEmployee.EmployeeId = updatedEmployee.EmployeeId;
+        }
+
+        // Cập nhật thông tin nhân viên (ví dụ: cập nhật các trường thông tin khác)
+        existingEmployee.Name = updatedEmployee.Name;
+        // Cập nhật các trường thông tin khác tùy ý
+
+        await _dbContext.SaveChangesAsync();
+
+        return Ok("Thông tin nhân viên đã được cập nhật thành công.");
+    }
+}
+
+
+

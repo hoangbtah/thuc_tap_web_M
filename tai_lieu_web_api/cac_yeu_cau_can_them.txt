@@ -1,0 +1,4 @@
+1. khi người dùng mua số lượng lớn hơn trong kho 
+cần đưa ra thông báo 
+2. cần thêm thống kê 
+3. 

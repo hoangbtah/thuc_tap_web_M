@@ -1,0 +1,9 @@
+1. Tạo các project -> refrence các project
+2. Hoàn thiện các project 
+Core: Entities, Iterface, Service
+Infrastructure : Repository class
+Api :Controller.
+3. Xử lý Dependency Infection 
+Chú ý :Nguyên tắc các class không được gọi trực tiếp tới các phương thức
+của nhau . Phải thông qua các interface .
+

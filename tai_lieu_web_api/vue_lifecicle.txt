@@ -1,0 +1,23 @@
+giai đoạn 1: beforecreate 
+-chưa thể truy cập vào data
+giai đoạn 2:created 
+- có thể truy cập vào data và event ,method
+-chưa thể truy cập vào Dom
+giai đoạn 3 : beforemount 
+-có thể truy cập vào data ,event và method
+-chưa thể truy cập vào Dom
+giai đoạn 4:mounted(chạy 1 lần)
+-có thể truy cập vào data ,event và method
+-có thể truy cập vào Dom
++binding 1 chiều khi thay đổi dữ liệu trong model thì 
+sẽ cập nhật tên giao diện dùng v-bind:value 
++binding 2 chiều khi thay dổi dữ liệu trong model 
+thì sẽ được cập nhật trên giao diện và ngược lại 
+cú phép dụng v-model="
+giai đoạn 5: beforeUpdate 
+-
+giai đoạn 6 :updated
+-
+giai đoạn 7: beforeUnmount (beforeDestroy)
+-
+giai đoạn 8 :mounted(destroued)

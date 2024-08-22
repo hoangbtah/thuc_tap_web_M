@@ -1,0 +1,132 @@
+CREATE TABLE dbferfurm.product (
+  ProductId CHAR(36) NOT NULL,
+  ProductName VARCHAR(50) DEFAULT NULL,
+  Image VARCHAR(25) DEFAULT NULL,
+  Quantity INT(11) DEFAULT NULL,
+  Description VARCHAR(255) DEFAULT NULL,
+  Price DECIMAL(19, 2) DEFAULT NULL,
+  CatagoryId CHAR(36) DEFAULT NULL,
+  ManufactorerId CHAR(36) DEFAULT NULL,
+  PRIMARY KEY (ProductId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci;
+
+ALTER TABLE dbferfurm.product 
+  ADD CONSTRAINT FK_product_CatagoryId FOREIGN KEY (CatagoryId)
+    REFERENCES dbferfurm.catagory(CatagoryId) ON DELETE NO ACTION;
+
+ALTER TABLE dbferfurm.product 
+  ADD CONSTRAINT FK_product_ManufactorerId FOREIGN KEY (ManufactorerId)
+    REFERENCES dbferfurm.manufactorer(ManufactorerId) ON DELETE NO ACTION;
+
+2
+CREATE TABLE dbferfurm.catagory (
+  CatagoryId CHAR(36) NOT NULL,
+  CatagoryName VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (CatagoryId)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 5461,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci;
+3
+CREATE TABLE dbferfurm.cart (
+  CartId CHAR(36) NOT NULL,
+  ProductId CHAR(36) DEFAULT NULL,
+  Quantity INT(11) DEFAULT NULL,
+  Price DECIMAL(19, 2) DEFAULT NULL,
+  Image VARCHAR(25) DEFAULT NULL,
+  UserId CHAR(36) DEFAULT NULL,
+  PRIMARY KEY (CartId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'Giỏ hàng';
+
+ALTER TABLE dbferfurm.cart 
+  ADD CONSTRAINT FK_cart_UserId FOREIGN KEY (UserId)
+    REFERENCES dbferfurm.user(UserId) ON DELETE NO ACTION;
+4
+CREATE TABLE dbferfurm.comment (
+  CommentId CHAR(36) NOT NULL,
+  CommentContent VARCHAR(255) DEFAULT NULL,
+  Rating INT(11) DEFAULT NULL,
+  UserName VARCHAR(25) DEFAULT NULL,
+  PostDate DATETIME DEFAULT NULL,
+  ProductId CHAR(36) DEFAULT NULL,
+  PRIMARY KEY (CommentId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'binh luan va danh gia';
+
+ALTER TABLE dbferfurm.comment 
+  ADD CONSTRAINT FK_comment_ProductId FOREIGN KEY (ProductId)
+    REFERENCES dbferfurm.product(ProductId) ON DELETE NO ACTION;
+5
+CREATE TABLE dbferfurm.`order` (
+  OrderId CHAR(36) NOT NULL,
+  UserId CHAR(36) NOT NULL,
+  OrderDate DATETIME DEFAULT NULL,
+  DeliveryDate DATETIME DEFAULT NULL,
+  Status VARCHAR(25) DEFAULT NULL,
+  PRIMARY KEY (OrderId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'Đơn hàng';
+
+ALTER TABLE dbferfurm.`order` 
+  ADD CONSTRAINT FK_order_UserId FOREIGN KEY (UserId)
+    REFERENCES dbferfurm.user(UserId) ON DELETE NO ACTION;
+6
+CREATE TABLE dbferfurm.orderdetail (
+  OrderDetailId CHAR(36) NOT NULL,
+  ProductId CHAR(36) DEFAULT NULL,
+  OrderId CHAR(36) DEFAULT NULL,
+  Quantity INT(11) DEFAULT NULL,
+  Price BIGINT(20) DEFAULT NULL,
+  Image VARCHAR(25) DEFAULT NULL,
+  PRIMARY KEY (OrderDetailId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'chi tiet don hang';
+
+ALTER TABLE dbferfurm.orderdetail 
+  ADD CONSTRAINT FK_orderdetail_ProductId FOREIGN KEY (ProductId)
+    REFERENCES dbferfurm.product(ProductId) ON DELETE NO ACTION;
+
+ALTER TABLE dbferfurm.orderdetail 
+  ADD CONSTRAINT FK_orderdetail_OrderId FOREIGN KEY (OrderId)
+    REFERENCES dbferfurm.`order`(OrderId) ON DELETE NO ACTION;
+7
+CREATE TABLE dbferfurm.user (
+  UserId CHAR(36) NOT NULL,
+  Name VARCHAR(50) DEFAULT NULL,
+  Address VARCHAR(50) DEFAULT NULL,
+  PhoneNumber VARCHAR(20) DEFAULT NULL,
+  Email VARCHAR(50) DEFAULT NULL,
+  Role INT(11) DEFAULT NULL,
+  PRIMARY KEY (UserId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci;
+8
+CREATE TABLE dbferfurm.manufactorer (
+  ManufactorerId CHAR(36) NOT NULL,
+  Name VARCHAR(50) DEFAULT NULL,
+  Address VARCHAR(50) DEFAULT NULL,
+  PRIMARY KEY (ManufactorerId)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb3,
+COLLATE utf8mb3_general_ci,
+COMMENT = 'Nhà sản xuất';

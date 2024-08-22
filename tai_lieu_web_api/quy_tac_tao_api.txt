@@ -1,0 +1,32 @@
+Quy tắc khi tạo 1 API
+-tên class (danh từ số nhiều)controller EmployeesContrller
+-tạo các phương thức :
++ Phải có attribute Methods, httpget,httppost,put delete
++ Nếu cùng địa chỉ router thì phải khác method 
++ Nếu cùng phương thức thì phải khác địa chỉ 
+
+
+Quy tắc truyền paragram cho các phương thức
+1. truyền qua router 
+-Định nghĩa tên endpoint trùng với tên của tham số đầu vào tại 
+phương thức trong cặp ngoặc nhọn{}
+- Đối với các dữ liệu nguyên thủy (int ,string ,decimal
+,bool...
+-> mặc định là các tham số đầu vào sẽ nhận qua router 
+không cần khai báo attribute param(fromrouter)
+- đối với dữ liệu phức hợp (đối tượng, mảng) mặc định các tham số
+đầu vào sẽ nhận qua body request (frombody).
+vd :đầu vào là 1 đối tượng khởi tạo class ->
+chỉ có thể sử dụng các action post put
+
+2. truyền qua query string 
+3. truyền qua body request 
+4. truyền qua header.
+
+các bước dụng api làm việc trực tiếp với database 
+B1 phải cài đặt các pagekage 
+dapper 
+mysqlconnector
+B2 tạo 1 class mô tả đối tượng làm việc với database
+B3 thực hiện viết các api.
+
