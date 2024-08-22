@@ -11,56 +11,65 @@
 @import url(../css/component/combobox.css);
 @import url(/assets/fonts/fontawesome-5.15.1/css/all.min.css);
 @import url(/assets/fonts/fontawesome-5.15.1/js/all.min.js);
+
 body {
-    font-family:Googlesand Bolds ;
+    font-family: Googlesand Bolds;
     font-size: 13px;
     margin: 0px;
 }
-@font-face{
-    font-family: Googlesand Bolds ;
+
+@font-face {
+    font-family: Googlesand Bolds;
     src: url(/assets/fonts/GoogleSans-Bold.otf);
 }
-@font-face{
-    font-family: Googlesand Mediums ;
+
+@font-face {
+    font-family: Googlesand Mediums;
     src: url(/assets/fonts/GoogleSans-Medium.otf);
 }
-@font-face{
-    font-family: Googlesand Regular ;
+
+@font-face {
+    font-family: Googlesand Regular;
     src: url(/assets/fonts/GoogleSans-Regular.otf);
 }
-.m-login{
+
+.m-login {
     background-color: rgb(0, 255, 0);
     color: #333;
     border-radius: 50%;
 }
-.main{
+
+.main {
     display: flex;
     width: 100%;
     height: calc(100vh - 48px);
 }
-.m-row{
+
+.m-row {
     width: 100%;
 }
+
 /* table,td,th{
     border: 1px solid;
 } */
-.m-loading{
+.m-loading {
     position: fixed;
     display: none;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 999;
     background-color: #fff;
 }
-.m-loading .m-loading-icon{
+
+.m-loading .m-loading-icon {
     position: absolute;
     width: 50px;
     height: 50px;
     top: 50%;
-    left: 50%; 
-     transform: translate(-50%,-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* background-image: url(/assets/img/loading.svg);
     background-size: contain; */
     /* border: 8px solid #3498db;
@@ -68,11 +77,15 @@ body {
     border-radius: 50%;
     animation: spin 2s linear infinite; */
 }
-@keyframes spin{
-    0%{
+
+@keyframes spin {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
+
+/* tạo nhánh của hoàng */
